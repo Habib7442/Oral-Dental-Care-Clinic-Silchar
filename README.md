@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Devarati Roy's Oral & Dental Care Clinic
 
-## Getting Started
+A brand-grade, high-performance marketing and appointment priority booking application designed for **Dr. Devarati Roy Dutta Choudhury (BDS)'s Oral & Dental Care Clinic** in Silchar, Assam. 
 
-First, run the development server:
+This website translates the clinic's stellar local reputation (**4.9★ rating from 248+ Google reviews**) into a custom, high-end digital presence—built with solid, elite clinical aesthetics (Auburn Plum & Warm Gold theme), modern typography, tactile paper-noise layering, and type-safe Framer Motion physics.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✦ Key Features
+
+- **Priority Booking Engine**: Interactive, responsive form allowing patients to request clinical priority slots by capturing Patient Name, 10-digit Phone, Preferred Treatment, and Date with full state transitions and reception screens.
+- **Scroll-Aware Persistent Navigation**: Custom global header that dynamically adjusts text and element colors based on scroll states (porcelain theme vs. deep plum solid backdrop) to guarantee readability at all times.
+- **Always-Visible Contact Sub-bar**: Persistent, interactive contact sub-bar displaying address coordinates and clickable hotline links, designed specifically to stack beautifully on mobile viewports rather than hiding.
+- **Sterile & Trust Moats Stripe**: bottom-anchored, viewport-scroll triggered social-proof grid highlighting the clinic's 100% sterile facility protocols, 25+ years of care, and gentle dental approach.
+- **Accessible Shadcn Sheet Menu**: Mobile layout uses an isolated, accessible `<Sheet>` menu drawer at `z-[100]`, pre-configured with ARIA descriptions to satisfy strict Radix UI specifications and avoid console warnings.
+- **Premium Tactile Backdrops**: Enhanced Porcelain page canvas utilizing performant vector fractal-noise filters to create a delicate paper fiber texture.
+
+---
+
+## 🎨 Premium Brand Aesthetics
+
+The application adheres to a strict, non-gradient, AAA-contrast color system registered within Tailwind CSS:
+
+* **Brand Plum (`#3E1635`)**: Auburn plum used for primary buttons, deep headings, footer blocks, and mobile drawer viewport.
+* **Brand Gold (`#C9A24B`)**: Warm gold highlight accents for active focus states, icons, and display subtitles.
+* **Porcelain (`#F6F4F7`)**: Pristine, clinical off-white canvas base layer providing eye comfort.
+* **Typography**:
+  * **Fraunces**: Elegant display Serif font used for primary page titles and display headings.
+  * **Inter**: High-legibility Sans font used for standard descriptions, inputs, and tabular tags.
+
+---
+
+## 📂 Core Directory Structure
+
+```text
+├── app/
+│   ├── globals.css          # Tailwind CSS v4 variables & custom paper noise styles
+│   ├── layout.tsx           # Base HTML layout wrapping dynamic SEO configurations
+│   └── page.tsx             # Entry page displaying navigation, hero, and footer structures
+├── components/
+│   ├── sections/
+│   │   ├── navigation.tsx   # Scroll-aware global header and Sheet mobile menu
+│   │   ├── hero.tsx         # Flagship two-column responsive Hero section & booking form
+│   │   └── footer.tsx       # Typography-aligned footer with clickable Google Maps anchors
+│   └── ui/                  # Shadcn UI primitives (Button, Card, Sheet, etc.)
+├── context/
+│   ├── project-overview.md  # Detailed business goals and scope definitions
+│   └── progress-tracker.md  # Incremental completion statuses and architectural logs
+├── lib/
+│   ├── utils.ts             # Tailwind class merging utility
+│   └── seo.ts               # Centralized Metadata and JSON-LD Structured Data generator
+└── public/
+    └── assets/              # Premium image assets and cutout silhouettes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Installation
 
-## Learn More
+Install all project dependencies:
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Run Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fire up the Turbopack-powered Next.js development server:
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application in action.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Verification & Type Safety
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Confirm standard compilation and complete TypeScript safety:
+```bash
+npx tsc --noEmit
+```
+This routine checks all properties, elements, Framer Motion easings, and imports, ensuring zero compile-time error states.

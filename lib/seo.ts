@@ -1,0 +1,156 @@
+import type { Metadata } from "next";
+
+export const CANONICAL_SITE_URL = "https://oraldentalsilchar.com"; // [CONFIRM exact domain at launch]
+
+interface MetadataProps {
+  title?: string;
+  description?: string;
+  path?: string;
+  noIndex?: boolean;
+}
+
+/**
+ * Reusable metadata generator for Next.js App Router metadata API.
+ */
+export function getMetadata({
+  title,
+  description,
+  path = "",
+  noIndex = false,
+}: MetadataProps = {}): Metadata {
+  const baseTitle = "Oral and Dental Care Clinic | Dr. Devarati Roy Dutta Choudhury";
+  const finalTitle = title ? `${title} | Oral & Dental Care` : baseTitle;
+  
+  const defaultDesc =
+    "Top-rated dental clinic in Silchar, led by Dr. Devarati Roy Dutta Choudhury (BDS). 4.9★ rated. Expert root canals, implants, cosmetic crowns, alignment braces, and child dentistry.";
+  const finalDesc = description || defaultDesc;
+
+  const canonicalUrl = `${CANONICAL_SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+
+  return {
+    title: finalTitle,
+    description: finalDesc,
+    metadataBase: new URL(CANONICAL_SITE_URL),
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: finalTitle,
+      description: finalDesc,
+      url: canonicalUrl,
+      siteName: "Oral and Dental Care Clinic Silchar",
+      locale: "en_IN",
+      type: "website",
+      images: [
+        {
+          url: "/og-image.jpg", // [NEW placeholder for dynamic or static social sharing]
+          width: 1200,
+          height: 630,
+          alt: "Oral and Dental Care Clinic Silchar",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: finalTitle,
+      description: finalDesc,
+      images: ["/og-image.jpg"],
+    },
+    robots: {
+      index: !noIndex,
+      follow: !noIndex,
+      googleBot: {
+        index: !noIndex,
+        follow: !noIndex,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
+
+/**
+ * Returns structured JSON-LD markup for local dentist medical business context.
+ * Compliant with Google Business guidelines and search crawls.
+ */
+export function getDentistSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Oral and Dental Care Clinic",
+    "image": `${CANONICAL_SITE_URL}/og-image.jpg`,
+    "@id": `${CANONICAL_SITE_URL}/#clinic`,
+    "url": CANONICAL_SITE_URL,
+    "telephone": "+91-94354-92181",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lochan Bairagi Road, Bilpar, Kanakpur",
+      "addressLocality": "Silchar",
+      "addressRegion": "Assam",
+      "postalCode": "788001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 24.8167549,
+      "longitude": 92.8001821
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Silchar" },
+      { "@type": "AdministrativeArea", "name": "Cachar" },
+      { "@type": "AdministrativeArea", "name": "Barak Valley" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Devarati Roy Dutta Choudhury",
+      "jobTitle": "Lead Dentist (BDS)"
+    },
+    "sameAs": [
+      "https://maps.google.com/?cid=14605927532328108426" // [GBP maps target]
+    ]
+  };
+}
+
+/**
+ * Returns structured JSON-LD markup for a dynamic FAQ segment.
+ */
+export function getFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer,
+      },
+    })),
+  };
+}
+
+/**
+ * Returns structured JSON-LD markup for custom medical procedures / treatment detail views.
+ */
+export function getMedicalProcedureSchema(name: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": name,
+    "description": description,
+    "procedureType": {
+      "@type": "MedicalSpecialty",
+      "name": "Dentistry"
+    }
+  };
+}
