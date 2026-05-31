@@ -47,7 +47,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-porcelain pt-36 pb-16 md:pt-44 md:pb-24 border-b border-ink-300 flex flex-col justify-center min-h-[90vh]">
+    <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-16 md:pb-24 border-b border-ink-300 flex flex-col justify-center min-h-[90vh]">
       {/* Paper Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
