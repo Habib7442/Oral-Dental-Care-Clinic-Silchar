@@ -2,6 +2,8 @@ import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import ServicesGrid from "@/components/sections/services-grid";
+import ReviewsWall from "@/components/sections/reviews-wall";
+import Faqs from "@/components/sections/faqs";
 
 export default function Home() {
   return (
@@ -16,6 +18,12 @@ export default function Home() {
 
         {/* Dynamic Services Grid Section */}
         <ServicesGrid />
+
+        {/* Curated Patient Reviews Wall Section */}
+        <ReviewsWall />
+
+        {/* Common Clinical FAQs Section */}
+        <Faqs />
       </main>
 
       {/* Global Brand Footer */}
