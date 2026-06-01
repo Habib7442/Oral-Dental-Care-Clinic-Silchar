@@ -33,13 +33,37 @@ export default function TreatmentPageClient({ service }: { service: Service }) {
     e.preventDefault();
     if (!name || !phone || phone.length < 10 || !date) return;
     
+    // Format Preferred Date for readability
+    const formattedDate = new Date(date).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+
+    // Construct a beautifully formatted WhatsApp pre-filled message
+    const message = `Hello Dr. Devarati,
+
+I would like to request a clinical priority appointment for ${service.title}. Here are my booking details:
+
+✦ Patient Name: ${name}
+✦ Phone Number: ${phone}
+✦ Selected Treatment: ${service.title}
+✦ Preferred Date: ${formattedDate}
+
+Thank you!`;
+
+    const waUrl = `https://wa.me/919435492181?text=${encodeURIComponent(message)}`;
+
     setSubmitted(true);
+    
+    // Open WhatsApp in a new tab after a brief delay for visual submit feedback
     setTimeout(() => {
+      window.open(waUrl, "_blank", "noopener,noreferrer");
       setName("");
       setPhone("");
       setDate("");
       setSubmitted(false);
-    }, 5000);
+    }, 1200);
   };
 
   return (
