@@ -7,7 +7,6 @@ import {
   ShieldCheck, 
   Clock, 
   Activity, 
-  Sparkles, 
   Star, 
   Award, 
   Baby, 

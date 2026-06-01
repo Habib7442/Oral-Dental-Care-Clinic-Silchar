@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Calendar, MessageSquare, ShieldCheck, Sparkles } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Calendar, MessageSquare, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactClient() {
@@ -122,7 +122,7 @@ export default function ContactClient() {
             {/* Emergency guidelines warning box */}
             <div className="p-6 border border-gold-500/20 bg-gold-500/5 rounded-3xl w-full text-left">
               <h4 className="font-serif text-sm font-semibold text-plum-900 mb-2 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-gold-600" />
+                <ShieldCheck className="w-4 h-4 text-gold-600" />
                 Sterile Care Protocols
               </h4>
               <p className="text-ink-700 text-xs leading-relaxed font-medium">

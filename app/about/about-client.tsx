@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ShieldCheck, Award, Star, Clock, Calendar, Heart, ShieldAlert, Sparkles, BookOpen } from "lucide-react";
+import { ShieldCheck, Award, Star, Clock, Calendar, Heart, ShieldAlert, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -59,10 +59,10 @@ export default function AboutClient() {
                 Dr. Devarati is one of Silchar's most trusted, highly experienced dental surgeons. She has dedicated her career to providing boutique, doctor-led clinical dental services centered completely on patient hygiene, physical comfort, and lasting therapeutic success.
               </p>
               <p>
-                Unlike chain clinics with rotating shifts of junior dentists, every single evaluation, root canal therapy, and cosmetic tooth alignment is **personally diagnosed and performed by Dr. Devarati**. This doctor-led consistency guarantees that your dental care remains in the hands of an experienced clinician who understands your individual dental history.
+                Unlike chain clinics with rotating shifts of junior dentists, every single evaluation, root canal therapy, and cosmetic tooth alignment is <strong>personally diagnosed and performed by Dr. Devarati</strong>. This doctor-led consistency guarantees that your dental care remains in the hands of an experienced clinician who understands your individual dental history.
               </p>
               <p>
-                Under her guidance, the clinic has achieved local prominence, boasting a **4.9★ aggregate rating from 248+ verified Google reviews** from families in Bilpar, Kanakpur, and the greater Barak Valley area.
+                Under her guidance, the clinic has achieved local prominence, boasting a <strong>4.9★ aggregate rating from 248+ verified Google reviews</strong> from families in Bilpar, Kanakpur, and the greater Barak Valley area.
               </p>
             </div>
 
@@ -216,7 +216,7 @@ export default function AboutClient() {
             {/* Pillar 4: Transparent Doctor-Led Care */}
             <div className="bg-white border border-ink-300 rounded-3xl p-6 md:p-8 flex flex-col items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center text-gold-700 shrink-0">
-                <Sparkles className="w-5 h-5 stroke-[1.5]" />
+                <Award className="w-5 h-5 stroke-[1.5]" />
               </div>
               <div className="flex flex-col">
                 <h4 className="font-serif text-lg font-semibold text-plum-900 mb-2">

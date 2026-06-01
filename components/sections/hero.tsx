@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Star, ShieldCheck, Sparkles, PhoneCall, Award, Calendar, ChevronDown } from "lucide-react";
+import { Star, ShieldCheck, Heart, PhoneCall, Award, Calendar, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
@@ -338,7 +338,7 @@ Thank you!`;
 
           <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="w-10 h-10 rounded-xl bg-gold-500/15 border border-gold-500/20 flex items-center justify-center shrink-0">
-              <Sparkles className="w-5 h-5 text-gold-700" />
+              <Heart className="w-5 h-5 text-gold-700" />
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-plum-900 leading-tight">Gentle & Painless</span>

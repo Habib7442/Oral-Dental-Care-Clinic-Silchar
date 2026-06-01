@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Star, ShieldCheck, Clock, Calendar, CheckCircle2, ChevronDown, PhoneCall, Sparkles } from "lucide-react";
+import { Star, ShieldCheck, Clock, Calendar, CheckCircle2, ChevronDown, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import { services } from "@/lib/services";
 import { cn } from "@/lib/utils";
@@ -145,7 +145,7 @@ Thank you!`;
             {/* Quick Clinic Timings Notice */}
             <div className="p-6 border border-gold-500/20 bg-gold-500/5 rounded-3xl w-full max-w-xl text-left">
               <h4 className="font-serif text-sm font-semibold text-plum-900 mb-2 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-gold-600" />
+                <Clock className="w-4 h-4 text-gold-600" />
                 Clinic Visiting Hours
               </h4>
               <p className="text-ink-700 text-xs leading-relaxed font-medium">
