@@ -32,13 +32,15 @@ This file maintains the exact chronological state of the project development. Up
 - `[x]` **Hero Image Column Alignment**: Reconfigured the main grid wrapper in [hero.tsx](file:///e:/Web%20Dev/oral-dental-clinic-silchar/components/sections/hero.tsx) from `items-center` to `items-start` on desktop viewports. This forces the top border of the flagship portrait card to align perfectly with the first line of the main heading (`Restore Your Smile.`), creating a cleaner, highly structured editorial hero visual flow.
 - `[x]` **Header Height Collision Bug Fix**: Resolved the mobile viewport layout bug where the heading text was clipped behind the taller, vertically-stacked mobile sticky navigation address sub-bar by implementing responsive padding-top steps (`pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px]`) in [hero.tsx](file:///e:/Web%20Dev/oral-dental-clinic-silchar/components/sections/hero.tsx) to clear the header context perfectly.
 
+- `[x]` **Unit 03: Bento Grid & Services Directory Expansion**: Integrated the full set of 19 clinical services featuring expressive emojis and detailed copies. Redesigned the homepage grid into a gorgeous top-10 Bento Grid featuring custom visual spans. Created a dedicated dynamic treatments directory at `/services` featuring a Framer-Motion animated tabs category filter to browse all 19 cards, linking to their respective detailed paths cleanly. Removed all Lucide icons from services grids and dynamic specs, migrating completely to large-format high-fidelity dental and clinical emojis.
+
 ## In Progress
 
-- `[/]` Preparing Unit 03 Spec for the Services Directory and procedure landing pages.
+- `[/]` Preparing Unit 04 Spec for Patient Review Wall & FAQ Accordions.
 
 ## Next Up
 
-- **Unit 03**: Services Hub & Detail Layouts (TS definitions mapping procedure details, Lucide React icon grids on the homepage, and dynamic procedure landing templates).
+- **Unit 04**: Patient Review Wall & FAQ Accordions (testimonials carousel, review entries, and JSON-LD structured FAQs).
 
 ## Architecture Decisions
 
@@ -48,3 +50,4 @@ This file maintains the exact chronological state of the project development. Up
 ## Session Notes
 
 - *2026-05-31*: Finished Unit 02, flat hero portrait refinements, layout alignment, and mobile navigation header spacing fixes. Crafted a gorgeous brand-grade editorial Hero section inspired by the customer's reference layout. Removed the gold "Verified Lead Dentist" overlay badge and the eyebrow tagline per user instructions. Completely removed the offset gold backdrop card ("double box") and the studio halo circle behind the patient cutout in [hero.tsx](file:///e:/Web%20Dev/oral-dental-clinic-silchar/components/sections/hero.tsx) to achieve an ultra-clean, flat, and shadow-free presentation, positioning the transparent cutout inside a pristine, single semi-opaque white frame (`bg-white/80`). Aligned the right column portrait card to the top level of the first line of text (`Restore Your Smile.`) by switching grid alignment from vertical-center (`items-center`) to vertical-start (`items-start`). Fixed a layout bug where the hero headings were clipped under the sticky navigation header on mobile by mapping dynamic responsive padding steps (`pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px]`) to the Hero section container.
+- *2026-06-01*: Finished Unit 03. Populated 19 custom clinical treatments inside `lib/services.ts` complete with durations, comfort pointers, prices, benefits, roadmaps, and local FAQs. Migrated completely from Lucide icons to dental emojis. Designed a high-end, mathematically aligned top-10 Bento Grid on the homepage using custom Tailwind spans and large emojis, featuring a primary navigation button to our new `/services` full-treatments directory. Engineered `/services` Server Component and dynamic Client filter grids using AnimatePresence, letting patients search treatments by category (Preventive, Restorative, Cosmetic, Surgical, Orthodontics) cleanly. Verified everything with type safety compiler.

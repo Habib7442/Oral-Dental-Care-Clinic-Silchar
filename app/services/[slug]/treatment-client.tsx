@@ -20,16 +20,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Service } from "@/lib/services";
 import { cn } from "@/lib/utils";
 
-// Map static strings to Lucide icon components
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  HeartPulse: Activity,
-  ShieldCheck,
-  Sparkles,
-  Star,
-  Award,
-  Baby
-};
-
 export default function TreatmentPageClient({ service }: { service: Service }) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
@@ -51,8 +41,6 @@ export default function TreatmentPageClient({ service }: { service: Service }) {
       setSubmitted(false);
     }, 5000);
   };
-
-  const IconComponent = iconMap[service.iconName] || ShieldCheck;
 
   return (
     <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
@@ -110,8 +98,8 @@ export default function TreatmentPageClient({ service }: { service: Service }) {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-700 shrink-0">
-                  <IconComponent className="w-5 h-5 stroke-[1.5]" />
+                <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-xl shrink-0 select-none leading-none">
+                  {service.emoji}
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Comfort level</span>
