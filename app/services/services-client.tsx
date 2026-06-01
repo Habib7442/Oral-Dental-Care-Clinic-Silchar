@@ -66,7 +66,7 @@ export default function ServicesClient() {
           </h1>
 
           <p className="text-ink-700 text-sm sm:text-base leading-relaxed">
-            Dr. Devarati Roy (BDS) offers 19 distinct advanced oral therapies. Filter by specialty area below to explore procedures, recovery times, local price benchmarks, and detailed clinical answers.
+            Dr. Devarati Roy (BDS) offers 19 distinct advanced oral therapies. Filter by specialty area below to explore clinical roadmaps, recovery timelines, procedural highlights, and detailed FAQs.
           </p>
         </div>
 
@@ -143,7 +143,6 @@ export default function ServicesClient() {
                 {/* Details Bar */}
                 <div className="flex items-center justify-between w-full text-[10px] sm:text-[11px] font-bold text-ink-500 border-t border-ink-300/40 pt-4 mt-auto">
                   <span>{service.duration}</span>
-                  <span className="text-gold-700">{service.basePrice.split(" ")[0]}</span>
                 </div>
 
                 {/* Learn More Trigger */}

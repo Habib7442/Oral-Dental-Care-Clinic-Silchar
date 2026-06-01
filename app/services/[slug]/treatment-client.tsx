@@ -86,7 +86,7 @@ export default function TreatmentPageClient({ service }: { service: Service }) {
             </div>
 
             {/* Performance Specifications Panel (No shadows, solid gold borders) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full border-y border-ink-300/80 py-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full border-y border-ink-300/80 py-6">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-700 shrink-0">
                   <Clock className="w-5 h-5 stroke-[1.5]" />
@@ -104,16 +104,6 @@ export default function TreatmentPageClient({ service }: { service: Service }) {
                 <div className="flex flex-col">
                   <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Comfort level</span>
                   <span className="text-xs sm:text-sm font-semibold text-plum-900 leading-tight mt-0.5">{service.comfortLevel}</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-700 shrink-0">
-                  <Star className="w-5 h-5 stroke-[1.5]" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Starting Price</span>
-                  <span className="text-xs sm:text-sm font-semibold text-plum-900 leading-tight mt-0.5">{service.basePrice}</span>
                 </div>
               </div>
             </div>

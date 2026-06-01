@@ -190,9 +190,6 @@ export default function ServicesGrid() {
                         <Clock className="w-3.5 h-3.5 text-gold-600 shrink-0" />
                         <span>{service.duration.split(" ")[0]} {service.duration.split(" ")[1]}</span>
                       </div>
-                      <div className="flex items-center gap-1 text-[10px] font-bold text-gold-700 uppercase tracking-wider bg-white border border-gold-500/15 rounded-lg px-2.5 py-1">
-                        <span>Starting {service.basePrice.split(" ")[0]}</span>
-                      </div>
                     </div>
                   )}
                 </div>
@@ -202,7 +199,6 @@ export default function ServicesGrid() {
                   {!isLargeCard && (
                     <div className="flex items-center justify-between w-full text-[10px] sm:text-[11px] font-bold text-ink-500 border-t border-ink-300/40 pt-4 mt-auto">
                       <span>{service.duration}</span>
-                      <span className="text-gold-700">{service.basePrice.split(" ")[0]}</span>
                     </div>
                   )}
 
