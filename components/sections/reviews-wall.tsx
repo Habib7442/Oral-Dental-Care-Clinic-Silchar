@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Star, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export interface Review {
   name: string;
@@ -72,9 +73,17 @@ const cardVariants = {
   }
 };
 
-export default function ReviewsWall() {
+export default function ReviewsWall({ isStandalone = false }: { isStandalone?: boolean }) {
   return (
-    <section id="reviews" className="relative bg-porcelain py-24 md:py-32 border-b border-ink-300 overflow-hidden">
+    <section
+      id="reviews"
+      className={cn(
+        "relative bg-porcelain border-b border-ink-300 overflow-hidden",
+        isStandalone
+          ? "pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
+          : "py-24 md:py-32"
+      )}
+    >
       {/* Paper Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">

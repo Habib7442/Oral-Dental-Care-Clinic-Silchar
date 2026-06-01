@@ -3,6 +3,7 @@ import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import ServicesGrid from "@/components/sections/services-grid";
 import ReviewsWall from "@/components/sections/reviews-wall";
+import SmileGallery from "@/components/sections/smile-gallery";
 import Faqs from "@/components/sections/faqs";
 
 export default function Home() {
@@ -21,6 +22,9 @@ export default function Home() {
 
         {/* Curated Patient Reviews Wall Section */}
         <ReviewsWall />
+
+        {/* Interactive Before & After Smile Gallery */}
+        <SmileGallery />
 
         {/* Common Clinical FAQs Section */}
         <Faqs />

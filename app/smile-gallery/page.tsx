@@ -2,23 +2,23 @@ import React from "react";
 import { getMetadata } from "@/lib/seo";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import ReviewsWall from "@/components/sections/reviews-wall";
+import SmileGallery from "@/components/sections/smile-gallery";
 
 export const metadata = getMetadata({
-  title: "Patient Reviews & Testimonials | Vetted 4.9★ Dental Care",
-  description: "Read actual verified patient reviews and testimonials for Dr. Devarati Roy BDS in Silchar, Barak Valley. Experience comfortable, gentle, and highly professional dentistry.",
-  path: "/reviews"
+  title: "Smile Gallery | Before & After Transformations",
+  description: "View verified cosmetic and restorative before-and-after smile transformations. Interactive veneers, crowns, clear aligners, and whitening results by Dr. Devarati in Silchar.",
+  path: "/smile-gallery"
 });
 
-export default function ReviewsPage() {
+export default function SmileGalleryPage() {
   return (
     <div className="flex flex-col min-h-screen bg-porcelain">
       {/* Global Navigation Header */}
       <Navigation />
 
-      {/* Main Reviews Content */}
+      {/* Main Smile Gallery Content */}
       <main className="flex-1 flex flex-col">
-        <ReviewsWall isStandalone={true} />
+        <SmileGallery isStandalone={true} />
       </main>
 
       {/* Global Brand Footer */}
