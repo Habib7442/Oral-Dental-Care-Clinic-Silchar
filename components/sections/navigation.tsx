@@ -129,7 +129,7 @@ export default function Navigation() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 text-[10px] sm:text-[11px] font-sans font-medium tracking-wide text-center sm:text-left">
             {/* Clickable Address Link */}
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Oral+and+Dental+Care+Clinic+Silchar"
+              href="https://www.google.com/maps/place/ORAL+AND+DENTAL+CARE+CLINIC/@24.8167597,92.7976072,17z/data=!4m6!3m5!1s0x374e4b4b5fc989f3:0x481870e5aaf612c1!8m2!3d24.8167548!4d92.8001821!16s%2Fg%2F11cs19gq1k"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

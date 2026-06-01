@@ -178,7 +178,7 @@ export default function ReviewsWall() {
             transition={{ duration: 0.5 }}
           >
             <a
-              href="https://www.google.com/maps/place/Oral+%26+Dental+Care/@24.8197945,92.7937549,17z/data=!4m8!3m7!1s0x374e4a7d363b9fbf:0x5e37803e1e673f1b!8m2!3d24.8197945!4d92.7963298!9m1!1b1!16s%2Fm%2F013_110g"
+              href="https://share.google/qF5iNJRYvpaxUGrIN"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-2 border-gold-500 text-plum-900 hover:bg-gold-500 hover:text-plum-900 font-sans text-xs sm:text-sm font-bold uppercase tracking-wider py-4 px-10 rounded-full transition-all duration-250 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-gold-500"
