@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
+import ServicesGrid from "@/components/sections/services-grid";
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         {/* Flagship Brand Hero Section */}
         <Hero />
+
+        {/* Dynamic Services Grid Section */}
+        <ServicesGrid />
       </main>
 
       {/* Global Brand Footer */}
