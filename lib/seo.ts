@@ -56,7 +56,7 @@ export function getMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.jpg", // [NEW placeholder for dynamic or static social sharing]
+          url: "/og_image.jpg", // [NEW placeholder for dynamic or static social sharing]
           width: 1200,
           height: 630,
           alt: "Oral and Dental Care Clinic Silchar",
@@ -67,7 +67,7 @@ export function getMetadata({
       card: "summary_large_image",
       title: finalTitle,
       description: finalDesc,
-      images: ["/og-image.jpg"],
+      images: ["/og_image.jpg"],
     },
     robots: {
       index: !noIndex,
@@ -92,7 +92,7 @@ export function getDentistSchema() {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Oral and Dental Care Clinic",
-    "image": `${CANONICAL_SITE_URL}/og-image.jpg`,
+    "image": `${CANONICAL_SITE_URL}/og_image.jpg`,
     "@id": `${CANONICAL_SITE_URL}/#clinic`,
     "url": CANONICAL_SITE_URL,
     "telephone": "+91-94354-92181",
