@@ -1,9 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { HelpCircle } from "lucide-react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export interface FaqItem {
   question: string;
@@ -34,8 +40,6 @@ export const faqList: FaqItem[] = [
 ];
 
 export default function Faqs() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <section id="faqs" className="relative bg-white py-24 md:py-32 border-b border-ink-300 overflow-hidden">
       {/* Paper Texture Overlay */}
@@ -86,61 +90,32 @@ export default function Faqs() {
         </div>
 
         {/* Accordion List Container */}
-        <div className="max-w-3xl mx-auto flex flex-col gap-4 w-full">
-          {faqList.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className={cn(
-                  "group border transition-all duration-300 rounded-3xl bg-porcelain/35 overflow-hidden",
-                  isOpen ? "border-gold-500 bg-white" : "border-ink-300 hover:border-ink-500"
-                )}
+        <Accordion type="single" collapsible className="max-w-3xl mx-auto flex flex-col gap-4 w-full">
+          {faqList.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+            >
+              <AccordionItem
+                value={`item-${index}`}
+                className="group border border-ink-300 hover:border-ink-500 data-[state=open]:border-gold-500 transition-all duration-300 rounded-3xl bg-porcelain/35 overflow-hidden data-[state=open]:bg-white"
               >
-                {/* Accordion Header Toggle button */}
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left font-serif text-sm sm:text-base font-semibold text-plum-900 focus:outline-none cursor-pointer"
-                  aria-expanded={isOpen}
-                >
+                <AccordionTrigger className="w-full flex items-center justify-between p-6 text-left font-serif text-sm sm:text-base font-semibold text-plum-900 hover:no-underline focus:outline-none cursor-pointer group/trigger **:data-[slot=accordion-trigger-icon]:text-gold-700 **:data-[slot=accordion-trigger-icon]:size-4">
                   <span className="flex items-center gap-3 pr-4 leading-snug">
-                    <HelpCircle className={cn(
-                      "w-4 h-4 shrink-0 transition-colors",
-                      isOpen ? "text-gold-600" : "text-ink-500 group-hover:text-plum-900"
-                    )} />
+                    <HelpCircle className="w-4 h-4 shrink-0 transition-colors text-ink-500 group-hover/trigger:text-plum-900 group-data-[state=open]/trigger:text-gold-600" />
                     {faq.question}
                   </span>
-                  <ChevronDown
-                    className={cn(
-                      "w-4 h-4 text-gold-700 transition-transform duration-300 shrink-0",
-                      isOpen ? "rotate-180 text-gold-500" : ""
-                    )}
-                  />
-                </button>
-
-                {/* Accordion Content Panel (with Framer Motion heights) */}
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: "easeInOut" }}
-                    >
-                      <div className="p-6 pt-0 border-t border-ink-300/30 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
-        </div>
+                </AccordionTrigger>
+                <AccordionContent className="p-6 pt-0 border-t border-ink-300/30 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans h-auto bg-transparent">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

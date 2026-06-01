@@ -29,7 +29,6 @@ export default function RootLayout({
       lang="en"
       className={cn(
         "h-full",
-        "scroll-smooth",
         "antialiased",
         inter.variable,
         fraunces.variable,
