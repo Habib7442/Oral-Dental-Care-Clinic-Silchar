@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
-export const CANONICAL_SITE_URL = "https://oraldentalsilchar.com"; // [CONFIRM exact domain at launch]
+// Dynamically resolve canonical base URL to support Vercel preview deployments and OG scraping.
+export const CANONICAL_SITE_URL = 
+  process.env.NEXT_PUBLIC_APP_URL || 
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://oraldentalsilchar.com");
 
 interface MetadataProps {
   title?: string;
