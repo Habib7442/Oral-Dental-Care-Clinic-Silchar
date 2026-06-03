@@ -75,8 +75,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
           : "py-24 md:py-32"
       )}
     >
-      {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0 bg-paper-noise" />
+
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         

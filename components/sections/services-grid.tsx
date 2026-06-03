@@ -84,8 +84,7 @@ export default function ServicesGrid() {
 
   return (
     <section id="services" className="relative bg-white py-24 md:py-32 border-b border-ink-300 overflow-hidden">
-      {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0 bg-paper-noise" />
+
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         {/* Section Header */}

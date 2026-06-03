@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 export default function AboutClient() {
   return (
     <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
-      {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply z-0 bg-paper-noise" />
+
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         
@@ -84,8 +83,7 @@ export default function AboutClient() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="w-full aspect-[4/5] rounded-3xl bg-white border border-ink-300 flex flex-col items-center justify-between p-8 md:p-12 relative overflow-hidden"
             >
-              {/* Paper Noise Over Card */}
-              <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply z-0 bg-paper-noise" />
+
 
               {/* Top Row: Clinical Credentials Tag */}
               <div className="flex justify-center z-10 w-full">

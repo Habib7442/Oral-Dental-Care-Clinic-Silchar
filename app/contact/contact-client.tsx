@@ -8,8 +8,7 @@ import { motion } from "framer-motion";
 export default function ContactClient() {
   return (
     <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
-      {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply z-0 bg-paper-noise" />
+
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         {/* Page Header */}
