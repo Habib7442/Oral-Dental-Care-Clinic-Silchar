@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Star, Heart, ArrowUpRight } from "lucide-react";
+import { MapPin, Phone, Clock, Star, Heart, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -41,7 +41,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-sm text-ink-300 leading-relaxed max-w-sm">
-            Silchar's leading doctor-led dental clinic. We deliver warm, gentle, and premium dental solutions using modern clinical equipment and sterilisation standards.
+            Silchar&apos;s leading doctor-led dental clinic. We deliver warm, gentle, and premium dental solutions using modern clinical equipment and sterilisation standards.
           </p>
           {/* Trust rating badge */}
           <div className="bg-plum-800/40 border border-plum-700/50 rounded-2xl p-4 flex items-start gap-3.5 max-w-xs shadow-md">

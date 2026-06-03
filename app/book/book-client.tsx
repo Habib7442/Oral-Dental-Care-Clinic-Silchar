@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Star, ShieldCheck, Clock, Calendar, CheckCircle2, ChevronDown, PhoneCall } from "lucide-react";
+import { Star, ShieldCheck, Clock, Calendar, ChevronDown, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
 import { services } from "@/lib/services";
-import { cn } from "@/lib/utils";
 
 export default function BookClient() {
   const [name, setName] = useState("");
@@ -136,7 +135,7 @@ Thank you!`;
                     Direct Confirmation Call
                   </h4>
                   <p className="text-ink-500 text-xs mt-1 leading-relaxed">
-                    Dr. Devarati's front office will call you within 15 minutes of reservation to confirm your exact session time.
+                    Dr. Devarati&apos;s front office will call you within 15 minutes of reservation to confirm your exact session time.
                   </p>
                 </div>
               </div>

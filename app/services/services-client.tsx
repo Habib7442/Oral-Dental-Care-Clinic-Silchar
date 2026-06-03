@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Clock, Star, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { services, Service } from "@/lib/services";
 import { cn } from "@/lib/utils";

@@ -6,21 +6,20 @@ import {
   ArrowLeft, 
   ShieldCheck, 
   Clock, 
-  Activity, 
   Star, 
-  Award, 
-  Baby, 
   CheckCircle2, 
-  ChevronDown, 
-  Calendar,
-  PhoneCall
+  Calendar
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Service } from "@/lib/services";
-import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function TreatmentPageClient({ service }: { service: Service }) {
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
   // Appointment Form States
   const [name, setName] = useState("");
@@ -189,50 +188,22 @@ Thank you!`;
                 </h3>
               </div>
               
-              <div className="flex flex-col gap-3 w-full mt-2">
-                {service.faqs.map((faq, index) => {
-                  const isOpen = openFaqIndex === index;
-                  return (
-                    <div 
-                      key={index}
-                      className={cn(
-                        "group border transition-all duration-300 rounded-2xl bg-white overflow-hidden",
-                        isOpen ? "border-gold-500 shadow-sm" : "border-ink-300 hover:border-ink-500"
-                      )}
-                    >
-                      {/* Accordion Toggle Trigger */}
-                      <button
-                        onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                        className="w-full flex items-center justify-between p-5 text-left font-serif text-sm sm:text-base font-semibold text-plum-900 focus:outline-none"
-                      >
-                        <span>{faq.question}</span>
-                        <ChevronDown 
-                          className={cn(
-                            "w-4 h-4 text-gold-700 transition-transform duration-300",
-                            isOpen ? "rotate-180 text-gold-500" : ""
-                          )} 
-                        />
-                      </button>
-
-                      {/* Accordion Content Panel */}
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.25, ease: "easeInOut" }}
-                          >
-                            <div className="p-5 pt-0 border-t border-ink-300/30 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans">
-                              {faq.answer}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                })}
-              </div>
+              <Accordion type="single" collapsible className="flex flex-col gap-3 w-full mt-2">
+                {service.faqs.map((faq, index) => (
+                  <AccordionItem
+                    value={`item-${index}`}
+                    key={index}
+                    className="group border border-ink-300 hover:border-ink-500 data-[state=open]:border-gold-500 transition-all duration-300 rounded-2xl bg-white overflow-hidden"
+                  >
+                    <AccordionTrigger className="w-full flex items-center justify-between p-5 text-left font-serif text-sm sm:text-base font-semibold text-plum-900 hover:no-underline focus:outline-none cursor-pointer group/trigger **:data-[slot=accordion-trigger-icon]:text-gold-700 **:data-[slot=accordion-trigger-icon]:size-4">
+                      <span>{faq.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="p-5 pt-0 border-t border-ink-300/30 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans h-auto bg-transparent">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </div>
 
           </div>

@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ShieldCheck, Calendar } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { ASSETS } from "@/lib/assets";
 
 export interface GalleryCase {
   id: string;
@@ -29,8 +30,8 @@ export const galleryCases: GalleryCase[] = [
     therapy: "Dr. Devarati prepared 10 ultra-thin (0.3mm) custom porcelain veneers and placed high-strength zirconia crowns, matching adjacent translucency.",
     duration: "2 Visits (7 - 10 Days apart)",
     outcome: "Flawless dental alignment, closed spaces, and natural-looking bright shade symmetry.",
-    beforeImage: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800", // Clinical dental setup representative
-    afterImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"   // Bright beautiful smile representative
+    beforeImage: ASSETS.gallery.veneers.before,
+    afterImage: ASSETS.gallery.veneers.after
   },
   {
     id: "aligners",
@@ -41,8 +42,8 @@ export const galleryCases: GalleryCase[] = [
     therapy: "Specialist clear aligner sequence designed via 3D intra-oral mapping. Sequence of 14 comfortable, removable clear alignment trays.",
     duration: "6 - 8 Months",
     outcome: "Perfect orthodontic alignment, eliminated food lodgement risks, and a wide, symmetrical smile.",
-    beforeImage: "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&q=80&w=800", // Medical scan focus
-    afterImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800"   // Happy broad smile
+    beforeImage: ASSETS.gallery.aligners.before,
+    afterImage: ASSETS.gallery.aligners.after
   },
   {
     id: "whitening",
@@ -53,8 +54,8 @@ export const galleryCases: GalleryCase[] = [
     therapy: "Three 15-minute cycles of professional, pH-balanced whitening gel activated by cool laser light, followed by desensitizing fluoride varnish.",
     duration: "1 Visit (45 mins)",
     outcome: "Immediate brightness shift of +8 natural shades (shade B1) with zero post-op enamel sensitivity.",
-    beforeImage: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800", // Patient chair clinical close
-    afterImage: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&q=80&w=800"   // Radiant smile confidence
+    beforeImage: ASSETS.gallery.whitening.before,
+    afterImage: ASSETS.gallery.whitening.after
   }
 ];
 

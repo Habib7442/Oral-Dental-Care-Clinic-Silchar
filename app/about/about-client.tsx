@@ -2,9 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { ShieldCheck, Award, Star, Clock, Calendar, Heart, ShieldAlert, BookOpen } from "lucide-react";
+import { ShieldCheck, Award, Star, Heart, ShieldAlert } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 
 export default function AboutClient() {
   return (
@@ -56,7 +55,7 @@ export default function AboutClient() {
 
             <div className="flex flex-col gap-5 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans mt-2">
               <p>
-                Dr. Devarati is one of Silchar's most trusted, highly experienced dental surgeons. She has dedicated her career to providing boutique, doctor-led clinical dental services centered completely on patient hygiene, physical comfort, and lasting therapeutic success.
+                Dr. Devarati is one of Silchar&apos;s most trusted, highly experienced dental surgeons. She has dedicated her career to providing boutique, doctor-led clinical dental services centered completely on patient hygiene, physical comfort, and lasting therapeutic success.
               </p>
               <p>
                 Unlike chain clinics with rotating shifts of junior dentists, every single evaluation, root canal therapy, and cosmetic tooth alignment is <strong>personally diagnosed and performed by Dr. Devarati</strong>. This doctor-led consistency guarantees that your dental care remains in the hands of an experienced clinician who understands your individual dental history.

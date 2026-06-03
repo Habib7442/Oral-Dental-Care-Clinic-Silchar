@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Clock, Star, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { services, Service } from "@/lib/services";
 import { cn } from "@/lib/utils";

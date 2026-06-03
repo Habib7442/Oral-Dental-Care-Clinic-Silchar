@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Star, ShieldCheck, Heart, PhoneCall, Award, Calendar, ChevronDown } from "lucide-react";
+import { Star, ShieldCheck, Heart, Award, Calendar, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { ASSETS } from "@/lib/assets";
 
 const childVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -119,7 +120,7 @@ Thank you!`;
               variants={childVariants}
               className="max-w-xl text-ink-700 font-sans text-sm sm:text-base leading-relaxed"
             >
-              Dr. Devarati Roy Dutta Choudhury (BDS) delivers Silchar's leading doctor-led oral care. Experience advanced restorative and cosmetic treatments in a modern, highly sterile, and gentle setting.
+              Dr. Devarati Roy Dutta Choudhury (BDS) delivers Silchar&apos;s leading doctor-led oral care. Experience advanced restorative and cosmetic treatments in a modern, highly sterile, and gentle setting.
             </motion.p>
 
             {/* Appointment Request Booking Form */}
@@ -286,7 +287,7 @@ Thank you!`;
               {/* Single clean card container with soft solid white/porcelain background - no double box, no shadow, no circle */}
               <div className="w-full h-full rounded-3xl overflow-hidden border border-ink-300 bg-white/80 relative z-0">
                 <Image
-                  src="/assets/hero_image.png"
+                  src={ASSETS.hero.portrait}
                   alt="Oral and Dental Care Clinic Silchar"
                   fill
                   priority

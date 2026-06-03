@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { Star, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -127,7 +126,7 @@ export default function ReviewsWall({ isStandalone = false }: { isStandalone?: b
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-ink-700 text-sm sm:text-base leading-relaxed"
           >
-            Dr. Devarati's exceptional clinical care, polite guidance, and pain-free treatment have earned the deep trust of hundreds of families across Barak Valley. Here is what they have to say:
+            Dr. Devarati&apos;s exceptional clinical care, polite guidance, and pain-free treatment have earned the deep trust of hundreds of families across Barak Valley. Here is what they have to say:
           </motion.p>
         </div>
 
@@ -156,7 +155,7 @@ export default function ReviewsWall({ isStandalone = false }: { isStandalone?: b
 
                 {/* Review Text */}
                 <p className="text-ink-700 text-xs sm:text-sm leading-relaxed italic mb-6 font-sans">
-                  "{review.text}"
+                  &ldquo;{review.text}&rdquo;
                 </p>
               </div>
 

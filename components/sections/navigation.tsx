@@ -50,7 +50,7 @@ export default function Navigation() {
       >
         {/* Top Gold Announcement Bar */}
         <div className="bg-gold-500 text-plum-900 font-sans text-[10px] md:text-xs font-semibold py-2 px-6 text-center tracking-wider uppercase flex items-center justify-center gap-1 border-b border-gold-600/10">
-          <span>✦ Silchar's Most-Loved Dental Care — Vetted 4.9★ from 248+ Patient Reviews ✦</span>
+          <span>✦ Silchar&apos;s Most-Loved Dental Care — Vetted 4.9★ from 248+ Patient Reviews ✦</span>
         </div>
 
         <div className={cn(

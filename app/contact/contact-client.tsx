@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Calendar, MessageSquare, ShieldCheck } from "lucide-react";
+import { MapPin, Phone, Clock, Calendar, MessageSquare, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactClient() {
