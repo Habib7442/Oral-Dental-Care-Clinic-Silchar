@@ -39,9 +39,17 @@ export const faqList: FaqItem[] = [
   }
 ];
 
-export default function Faqs() {
+export default function Faqs({ isStandalone = false }: { isStandalone?: boolean }) {
   return (
-    <section id="faqs" className="relative bg-white py-24 md:py-32 border-b border-ink-300 overflow-hidden">
+    <section
+      id="faqs"
+      className={cn(
+        "relative bg-white border-b border-ink-300 overflow-hidden",
+        isStandalone
+          ? "pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
+          : "py-24 md:py-32"
+      )}
+    >
       {/* Paper Texture Overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
