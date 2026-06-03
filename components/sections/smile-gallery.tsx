@@ -174,7 +174,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
               />
 
               {/* Dynamic Before Badge Overlay */}
-              <div className="absolute top-4 left-4 bg-plum-900/90 text-porcelain text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full select-none z-20">
+              <div className="absolute top-4 right-4 bg-plum-900/90 text-porcelain text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full select-none z-[5]">
                 Before Therapy
               </div>
 
@@ -190,7 +190,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
                 />
 
                 {/* Dynamic After Badge Overlay */}
-                <div className="absolute top-4 right-4 bg-gold-500 text-plum-900 text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full select-none z-20">
+                <div className="absolute top-4 left-4 bg-gold-500 text-plum-900 text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full select-none z-20">
                   After Treatment
                 </div>
               </div>
