@@ -9,14 +9,7 @@ export default function ContactClient() {
   return (
     <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
       {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply z-0">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <filter id="contact-paper-noise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#contact-paper-noise)" />
-        </svg>
-      </div>
+      <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply z-0 bg-paper-noise" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         {/* Page Header */}

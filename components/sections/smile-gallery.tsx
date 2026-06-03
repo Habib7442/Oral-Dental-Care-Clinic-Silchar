@@ -76,14 +76,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
       )}
     >
       {/* Paper Texture Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <filter id="gallery-paper-noise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#gallery-paper-noise)" />
-        </svg>
-      </div>
+      <div className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-multiply z-0 bg-paper-noise" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         
