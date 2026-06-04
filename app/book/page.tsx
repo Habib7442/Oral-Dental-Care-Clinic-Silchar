@@ -6,7 +6,7 @@ import BookClient from "./book-client";
 
 export const metadata = getMetadata({
   title: "Request a Priority Appointment | Direct WhatsApp Booking",
-  description: "Secure a priority dental appointment slot with Dr. Devarati Roy Dutta Choudhury in Silchar. Fill out our instant clinical booking form and connect directly on WhatsApp.",
+  description: "Secure a priority dental appointment slot with Dr. Devarati Ray Dutta Chowdhury in Silchar. Fill out our instant clinical booking form and connect directly on WhatsApp.",
   path: "/book"
 });
 

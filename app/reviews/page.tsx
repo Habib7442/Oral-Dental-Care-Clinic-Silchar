@@ -6,7 +6,7 @@ import ReviewsWall from "@/components/sections/reviews-wall";
 
 export const metadata = getMetadata({
   title: "Patient Reviews & Testimonials | Vetted 4.9★ Dental Care",
-  description: "Read actual verified patient reviews and testimonials for Dr. Devarati Roy BDS in Silchar, Barak Valley. Experience comfortable, gentle, and highly professional dentistry.",
+  description: "Read actual verified patient reviews and testimonials for Dr. Devarati Ray BDS in Silchar, Barak Valley. Experience comfortable, gentle, and highly professional dentistry.",
   path: "/reviews"
 });
 

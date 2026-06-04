@@ -18,11 +18,11 @@ export function getMetadata({
   path = "",
   noIndex = false,
 }: MetadataProps = {}): Metadata {
-  const baseTitle = "Oral and Dental Care Clinic | Dr. Devarati Roy Dutta Choudhury";
+  const baseTitle = "Oral and Dental Care Clinic | Dr. Devarati Ray Dutta Chowdhury";
   const finalTitle = title ? `${title} | Oral & Dental Care` : baseTitle;
   
   const defaultDesc =
-    "Top-rated dental clinic in Silchar, led by Dr. Devarati Roy Dutta Choudhury (BDS). 4.9★ rated. Expert root canals, implants, cosmetic crowns, alignment braces, and child dentistry.";
+    "Top-rated dental clinic in Silchar, led by Dr. Devarati Ray Dutta Chowdhury (BDS). 4.9★ rated. Expert root canals, implants, cosmetic crowns, alignment braces, and child dentistry.";
   const finalDesc = description || defaultDesc;
 
   const canonicalUrl = `${CANONICAL_SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
@@ -125,7 +125,7 @@ export function getDentistSchema() {
     ],
     "founder": {
       "@type": "Person",
-      "name": "Dr. Devarati Roy Dutta Choudhury",
+      "name": "Dr. Devarati Ray Dutta Chowdhury",
       "jobTitle": "Lead Dentist (BDS)"
     },
     "sameAs": [

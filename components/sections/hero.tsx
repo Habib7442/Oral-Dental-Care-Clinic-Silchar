@@ -112,7 +112,7 @@ Thank you!`;
               variants={childVariants}
               className="max-w-xl text-ink-700 font-sans text-sm sm:text-base leading-relaxed"
             >
-              Dr. Devarati Roy Dutta Choudhury (BDS) delivers Silchar&apos;s leading doctor-led oral care. Experience advanced restorative and cosmetic treatments in a modern, highly sterile, and gentle setting.
+              Dr. Devarati Ray Dutta Chowdhury (BDS) delivers Silchar&apos;s leading doctor-led oral care. Experience advanced restorative and cosmetic treatments in a modern, highly sterile, and gentle setting.
             </motion.p>
 
             {/* Appointment Request Booking Form */}

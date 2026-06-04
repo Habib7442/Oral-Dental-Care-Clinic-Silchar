@@ -6,7 +6,7 @@ import AboutClient from "./about-client";
 
 export const metadata = getMetadata({
   title: "About Dr. Devarati & Clinical Philosophy",
-  description: "Explore Dr. Devarati Roy Dutta Choudhury's BDS qualifications, lead dental clinical practice, multi-stage sterilization standards, and patient comfort vision in Silchar, Assam.",
+  description: "Explore Dr. Devarati Ray Dutta Chowdhury's BDS qualifications, lead dental clinical practice, multi-stage sterilization standards, and patient comfort vision in Silchar, Assam.",
   path: "/about"
 });
 

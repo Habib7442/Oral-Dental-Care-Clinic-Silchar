@@ -71,7 +71,7 @@ Thank you!`;
             Clinical Priority Booking Portal
           </h1>
           <p className="text-ink-700 text-sm sm:text-base leading-relaxed">
-            Reserve your clinical slot online and connect directly with Dr. Devarati Roy Dutta Choudhury. Your inputs will generate an instant priority appointment file sent straight to our WhatsApp desk.
+            Reserve your clinical slot online and connect directly with Dr. Devarati Ray Dutta Chowdhury. Your inputs will generate an instant priority appointment file sent straight to our WhatsApp desk.
           </p>
         </div>
 

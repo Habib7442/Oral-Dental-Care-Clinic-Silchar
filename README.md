@@ -1,6 +1,6 @@
-# Dr. Devarati Roy's Oral & Dental Care Clinic
+# Dr. Devarati Ray's Oral & Dental Care Clinic
 
-A brand-grade, high-performance marketing and appointment priority booking application designed for **Dr. Devarati Roy Dutta Choudhury (BDS)'s Oral & Dental Care Clinic** in Silchar, Assam. 
+A brand-grade, high-performance marketing and appointment priority booking application designed for **Dr. Devarati Ray Dutta Chowdhury (BDS)'s Oral & Dental Care Clinic** in Silchar, Assam. 
 
 This website translates the clinic's stellar local reputation (**4.9★ rating from 248+ Google reviews**) into a custom, high-end digital presence—built with solid, elite clinical aesthetics (Auburn Plum & Warm Gold theme), modern typography, tactile paper-noise layering, and type-safe Framer Motion physics.
 

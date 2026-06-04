@@ -21,7 +21,7 @@ export default function AboutClient() {
             </span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-medium tracking-tight text-plum-900 leading-tight mb-4">
-            About Dr. Devarati Roy
+            About Dr. Devarati Ray
           </h1>
           <p className="text-ink-700 text-sm sm:text-base leading-relaxed">
             Discover the patient-first philosophy, academic credentials, and rigorous clinical sterilization standards behind our 4.9★ rated practice in Silchar.
@@ -38,7 +38,7 @@ export default function AboutClient() {
                 ✦ Lead Practitioner & Owner
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-plum-900 leading-tight">
-                Dr. Devarati Roy Dutta Choudhury
+                Dr. Devarati Ray Dutta Chowdhury
               </h2>
               <span className="text-sm font-bold text-gold-700 font-sans tracking-wide">
                 BDS (Bachelor of Dental Surgery) · Reg No: 3376-A (ASDC)
@@ -109,7 +109,7 @@ export default function AboutClient() {
               {/* Bottom Row: Doctor Details block */}
               <div className="flex flex-col items-center text-center z-10 w-full">
                 <span className="font-serif text-lg font-bold text-plum-900">
-                  Dr. Devarati Roy Dutta Choudhury
+                  Dr. Devarati Ray Dutta Chowdhury
                 </span>
                 <span className="text-[10px] font-bold text-gold-700 uppercase tracking-widest mt-1 font-sans">
                   BDS Lead Dentist & Clinic Founder

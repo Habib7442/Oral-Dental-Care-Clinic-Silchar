@@ -6,7 +6,7 @@ import ContactClient from "./contact-client";
 
 export const metadata = getMetadata({
   title: "Contact & Directions | Premium Dental Clinic Silchar",
-  description: "Find coordinates, opening hours, phone numbers, and direct Google Maps directions to Dr. Devarati Roy Dutta Choudhury's Oral and Dental Care Clinic in Silchar.",
+  description: "Find coordinates, opening hours, phone numbers, and direct Google Maps directions to Dr. Devarati Ray Dutta Chowdhury's Oral and Dental Care Clinic in Silchar.",
   path: "/contact"
 });
 

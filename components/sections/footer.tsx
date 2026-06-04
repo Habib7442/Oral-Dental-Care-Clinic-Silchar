@@ -37,7 +37,7 @@ export default function Footer() {
               Oral & Dental Care
             </span>
             <span className="text-[10px] uppercase tracking-widest text-gold-500 font-semibold font-sans leading-none mt-1 group-hover:text-gold-200 transition-colors">
-              Dr. Devarati Roy (BDS)
+              Dr. Devarati Ray (BDS)
             </span>
           </Link>
           <p className="text-sm text-ink-300 leading-relaxed max-w-sm">

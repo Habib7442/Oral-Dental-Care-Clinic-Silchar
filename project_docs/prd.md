@@ -102,7 +102,7 @@ Oral and Dental Care Clinic, led by **Dr. Devarati**, is one of the highest-rate
 | Attribute | Detail |
 |---|---|
 | Clinic name | **Oral and Dental Care Clinic** |
-| Lead dentist | **Dr. Devarati** (Dr. Devarati Roy Dutta Choudhury, BDS) — **[CONFIRM full name + qualifications/registration no.]** |
+| Lead dentist | **Dr. Devarati** (Dr. Devarati Ray Dutta Chowdhury, BDS) — **[CONFIRM full name + qualifications/registration no.]** |
 | Address | Lochan Bairagi Rd, Bilpar, Kanakpur, Silchar, Cachar, Assam **788001** (landmark: near Rahul Medicos) — **[CONFIRM exact street: some listings say Radhamadhab Road]** |
 | Phone | **+91 94354 92181** |
 | WhatsApp | **[CONFIRM]** (recommended: same number, WhatsApp Business) |
@@ -554,7 +554,7 @@ Implement and validate (Rich Results Test):
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
     "opens": "10:00", "closes": "20:00"
   }],
-  "founder": { "@type": "Person", "name": "Dr. Devarati Roy Dutta Choudhury", "jobTitle": "Dentist (BDS)" },
+  "founder": { "@type": "Person", "name": "Dr. Devarati Ray Dutta Chowdhury", "jobTitle": "Dentist (BDS)" },
   "sameAs": ["<GBP url>","<Facebook>","<Instagram>","<Practo/Lybrate>"]
 }
 ```

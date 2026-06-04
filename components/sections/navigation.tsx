@@ -70,7 +70,7 @@ export default function Navigation() {
               "text-[10px] uppercase tracking-widest font-semibold font-sans leading-none mt-1 transition-colors",
               scrolled ? "text-gold-200" : "text-gold-700"
             )}>
-              Dr. Devarati Roy (BDS)
+              Dr. Devarati Ray (BDS)
             </span>
           </Link>
 
@@ -167,7 +167,7 @@ export default function Navigation() {
           {/* Header section in panel */}
           <SheetHeader className="border-b border-plum-800 pb-6 text-left p-0 mb-8 mt-6">
             <SheetTitle className="font-serif text-lg font-semibold tracking-wide text-porcelain leading-tight">
-              Dr. Devarati Roy (BDS)
+              Dr. Devarati Ray (BDS)
             </SheetTitle>
             <SheetDescription className="text-[10px] text-gold-500 font-sans tracking-widest uppercase font-semibold leading-none mt-1.5">
               Oral & Dental Care
