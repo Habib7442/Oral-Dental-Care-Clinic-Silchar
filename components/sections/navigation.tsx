@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Calendar, Menu, X, Star, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -58,20 +59,30 @@ export default function Navigation() {
           scrolled ? "py-3.5" : "py-5"
         )}>
 
-          {/* Logo / Brand (OD avatar removed per user request) */}
-          <Link href="/" className="flex flex-col group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-lg text-left">
-            <span className={cn(
-              "font-serif text-lg md:text-xl font-semibold tracking-wide leading-tight transition-colors",
-              scrolled ? "text-porcelain group-hover:text-gold-200" : "text-plum-900 group-hover:text-gold-700"
-            )}>
-              Oral & Dental Care
-            </span>
-            <span className={cn(
-              "text-[10px] uppercase tracking-widest font-semibold font-sans leading-none mt-1 transition-colors",
-              scrolled ? "text-gold-200" : "text-gold-700"
-            )}>
-              Dr. Devarati Ray (BDS)
-            </span>
+          {/* Logo / Brand (using public/logo.png) */}
+          <Link href="/" className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-lg text-left">
+            <Image
+              src="/logo.png"
+              alt="Oral & Dental Care Clinic Logo"
+              width={44}
+              height={44}
+              priority
+              className="h-11 w-auto object-contain bg-white rounded-xl p-1 border border-ink-300/20 shadow-sm shrink-0"
+            />
+            <div className="flex flex-col">
+              <span className={cn(
+                "font-serif text-base md:text-lg font-semibold tracking-wide leading-none transition-colors",
+                scrolled ? "text-porcelain group-hover:text-gold-200" : "text-plum-900 group-hover:text-gold-700"
+              )}>
+                Oral & Dental Care
+              </span>
+              <span className={cn(
+                "text-[10px] uppercase tracking-widest font-semibold font-sans leading-none mt-1.5 transition-colors",
+                scrolled ? "text-gold-200" : "text-gold-700"
+              )}>
+                Dr. Devarati Ray (BDS)
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -165,13 +176,22 @@ export default function Navigation() {
           className="bg-plum-900 border-plum-800 text-porcelain flex flex-col p-6 w-full max-w-sm z-[100]"
         >
           {/* Header section in panel */}
-          <SheetHeader className="border-b border-plum-800 pb-6 text-left p-0 mb-8 mt-6">
-            <SheetTitle className="font-serif text-lg font-semibold tracking-wide text-porcelain leading-tight">
-              Dr. Devarati Ray (BDS)
-            </SheetTitle>
-            <SheetDescription className="text-[10px] text-gold-500 font-sans tracking-widest uppercase font-semibold leading-none mt-1.5">
-              Oral & Dental Care
-            </SheetDescription>
+          <SheetHeader className="border-b border-plum-800 pb-6 text-left p-0 mb-8 mt-6 flex flex-row items-center gap-3 space-y-0">
+            <Image
+              src="/logo.png"
+              alt="Oral & Dental Care Clinic Logo"
+              width={40}
+              height={40}
+              className="h-10 w-auto object-contain bg-white rounded-xl p-1 border border-ink-300/10 shadow-sm shrink-0"
+            />
+            <div className="flex flex-col">
+              <SheetTitle className="font-serif text-base font-semibold tracking-wide text-porcelain leading-none">
+                Dr. Devarati Ray (BDS)
+              </SheetTitle>
+              <SheetDescription className="text-[10px] text-gold-500 font-sans tracking-widest uppercase font-semibold leading-none mt-1.5">
+                Oral & Dental Care
+              </SheetDescription>
+            </div>
           </SheetHeader>
 
           {/* Link List */}

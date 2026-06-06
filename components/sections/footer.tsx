@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock, Star, Heart, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
@@ -32,13 +33,22 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
         {/* Column 1: Clinic Brand Bio */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="flex flex-col group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-lg text-left">
-            <span className="font-serif text-lg font-semibold tracking-wide text-porcelain leading-tight group-hover:text-gold-200 transition-colors">
-              Oral & Dental Care
-            </span>
-            <span className="text-[10px] uppercase tracking-widest text-gold-500 font-semibold font-sans leading-none mt-1 group-hover:text-gold-200 transition-colors">
-              Dr. Devarati Ray (BDS)
-            </span>
+          <Link href="/" className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 rounded-lg text-left">
+            <Image
+              src="/logo.png"
+              alt="Oral & Dental Care Clinic Logo"
+              width={44}
+              height={44}
+              className="h-11 w-auto object-contain bg-white rounded-xl p-1 border border-ink-300/10 shadow-sm shrink-0"
+            />
+            <div className="flex flex-col">
+              <span className="font-serif text-base font-semibold tracking-wide text-porcelain leading-none group-hover:text-gold-200 transition-colors">
+                Oral & Dental Care
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-gold-500 font-semibold font-sans leading-none mt-1.5 group-hover:text-gold-200 transition-colors">
+                Dr. Devarati Ray (BDS)
+              </span>
+            </div>
           </Link>
           <p className="text-sm text-ink-300 leading-relaxed max-w-sm">
             Silchar&apos;s leading doctor-led dental clinic. We deliver warm, gentle, and premium dental solutions using modern clinical equipment and sterilisation standards.

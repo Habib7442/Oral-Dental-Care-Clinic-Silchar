@@ -25,7 +25,7 @@ export const patientReviews: Review[] = [
   },
   {
     name: "Subhankar Das",
-    text: "I would like to thank Dr Debarati Roy Madam for giving me a confident lovely smile 😀. I would highly recommend Oral and Dental care for Dental check up. Mam and the support staffs are not just professional at their services but also takes care of their patients. Thank you 😊"
+    text: "I would like to thank Dr Debarati Ray Madam for giving me a confident lovely smile 😀. I would highly recommend Oral and Dental care for Dental check up. Mam and the support staffs are not just professional at their services but also takes care of their patients. Thank you 😊"
   },
   {
     name: "Asmita Ray",

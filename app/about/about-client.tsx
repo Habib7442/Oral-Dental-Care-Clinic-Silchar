@@ -41,7 +41,7 @@ export default function AboutClient() {
                 Dr. Devarati Ray Dutta Chowdhury
               </h2>
               <span className="text-sm font-bold text-gold-700 font-sans tracking-wide">
-                BDS (Bachelor of Dental Surgery) · Reg No: 3376-A (ASDC)
+                BDS (Bachelor of Dental Surgery)
               </span>
             </div>
 

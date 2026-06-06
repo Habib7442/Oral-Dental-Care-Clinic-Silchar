@@ -2,6 +2,7 @@ import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import ServicesGrid from "@/components/sections/services-grid";
+import ClinicGallery from "@/components/sections/clinic-gallery";
 import ReviewsWall from "@/components/sections/reviews-wall";
 import SmileGallery from "@/components/sections/smile-gallery";
 import Faqs from "@/components/sections/faqs";
@@ -19,6 +20,9 @@ export default function Home() {
 
         {/* Dynamic Services Grid Section */}
         <ServicesGrid />
+
+        {/* Reusable Clinic Gallery Bento Grid Section */}
+        <ClinicGallery />
 
         {/* Curated Patient Reviews Wall Section */}
         <ReviewsWall />
