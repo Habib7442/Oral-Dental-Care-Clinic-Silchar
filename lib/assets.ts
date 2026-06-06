@@ -18,4 +18,14 @@ export const ASSETS = {
       after: "/assets/whitening/after.webp",
     },
   },
+  clinic: {
+    treatmentRoom: "/assets/clinic/advanced-dental-treatment-room-silchar.webp",
+    awards: "/assets/clinic/dental-clinic-awards-and-certifications-silchar.webp",
+    quoteFrame: "/assets/clinic/dental-clinic-patient-care-quote-frame.webp",
+    consultationCabin: "/assets/clinic/dental-consultation-cabin-silchar.webp",
+    valuesWallArt: "/assets/clinic/dental-team-values-wall-art.webp",
+    multiChairFacility: "/assets/clinic/multi-chair-dental-treatment-facility-silchar.webp",
+    entrance: "/assets/clinic/oral-dental-care-clinic-entrance-silchar.webp",
+    waitingArea: "/assets/clinic/oraldentalcare-clinic-waiting-area-silchar.webp",
+  },
 };
