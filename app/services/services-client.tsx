@@ -114,7 +114,7 @@ export default function ServicesClient() {
               >
                 {/* Header row: Emoji & Category */}
                 <div className="flex items-center justify-between w-full mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center text-2xl group-hover:bg-gold-500 transition-colors duration-300 select-none">
+                  <div className="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center text-2xl group-hover:bg-gold-500/20 group-hover:border-gold-500/30 transition-colors duration-300 select-none">
                     {service.emoji}
                   </div>
                   <span className={cn("text-[9px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full font-sans", getCategoryStyles(service.category))}>

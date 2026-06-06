@@ -149,7 +149,7 @@ export default function ServicesGrid() {
                   {/* Header Row: Emoji & Badge */}
                   <div className="flex items-center justify-between w-full mb-6">
                     <div className={cn(
-                      "rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center transition-all duration-300 group-hover:bg-gold-500 select-none",
+                      "rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center transition-all duration-300 group-hover:bg-gold-500/20 group-hover:border-gold-500/30 select-none",
                       isLargeCard ? "w-16 h-16 text-4xl" : "w-12 h-12 text-2xl"
                     )}>
                       {service.emoji}
@@ -180,7 +180,7 @@ export default function ServicesGrid() {
                     <div className="flex flex-wrap items-center gap-3 mb-6 pt-2">
                       <div className="flex items-center gap-1 text-[10px] font-bold text-ink-500 uppercase tracking-wider bg-white border border-ink-300/40 rounded-lg px-2.5 py-1">
                         <Clock className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                        <span>{service.duration.split(" ")[0]} {service.duration.split(" ")[1]}</span>
+                        <span>{service.duration.split(" (")[0]}</span>
                       </div>
                     </div>
                   )}

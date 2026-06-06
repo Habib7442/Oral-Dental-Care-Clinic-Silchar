@@ -25,17 +25,21 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  onClick,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  onClick?: () => void;
 }) => {
   return (
     <div
+      onClick={onClick}
       className={cn(
-        "group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border border-ink-300 bg-white p-4 transition-all duration-300 hover:border-gold-500 hover:shadow-[0_6px_20px_rgba(27,19,32,0.03)] cursor-default",
+        "group/bento row-span-1 flex flex-col justify-between space-y-4 rounded-3xl border border-ink-300 bg-white p-4 transition-all duration-300 hover:border-gold-500 hover:shadow-[0_6px_20px_rgba(27,19,32,0.03)]",
+        onClick ? "cursor-pointer" : "cursor-default",
         className,
       )}
     >
