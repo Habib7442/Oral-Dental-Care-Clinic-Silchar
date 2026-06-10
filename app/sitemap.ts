@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/gallery",
     "/reviews",
     "/services",
+    "/privacy",
+    "/terms",
   ];
 
   // Map static routes to sitemap format
