@@ -80,6 +80,9 @@ export function getMetadata({
         "max-snippet": -1,
       },
     },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+    },
   };
 }
 
