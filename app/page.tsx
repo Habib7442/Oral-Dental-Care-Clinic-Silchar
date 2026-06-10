@@ -7,10 +7,18 @@ import ClinicGallery from "@/components/sections/clinic-gallery";
 import ReviewsWall from "@/components/sections/reviews-wall";
 import SmileGallery from "@/components/sections/smile-gallery";
 import Faqs from "@/components/sections/faqs";
+import { getDentistSchema } from "@/lib/seo";
 
 export default function Home() {
+  const dentistSchema = getDentistSchema();
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      {/* Dynamic SEO Schema Injection */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }}
+      />
       {/* Global Navigation Header */}
       <Navigation />
 

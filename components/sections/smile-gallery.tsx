@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -159,10 +160,12 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             
             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-plum-800 select-none bg-plum-900">
               {/* BEFORE IMAGE (Static in the background) */}
-              <img
+              <Image
                 src={activeCase.beforeImage}
                 alt={`${activeCase.title} before treatment`}
-                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                fill
+                className="object-cover pointer-events-none"
+                sizes="(max-w-7xl) 50vw, 100vw"
               />
 
               {/* Dynamic Before Badge Overlay */}
@@ -175,10 +178,12 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
                 className="absolute inset-0 w-full h-full z-10"
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
               >
-                <img
+                <Image
                   src={activeCase.afterImage}
                   alt={`${activeCase.title} after treatment`}
-                  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                  fill
+                  className="object-cover pointer-events-none"
+                  sizes="(max-w-7xl) 50vw, 100vw"
                 />
 
                 {/* Dynamic After Badge Overlay */}
