@@ -29,6 +29,24 @@ const getCategoryStyles = (category: Service["category"]) => {
   }
 };
 
+// Map categories to distinct clinical colored card backgrounds
+const getCardBgStyles = (category: Service["category"]) => {
+  switch (category) {
+    case "Restorative":
+      return "bg-[#F3F6FA] border-blue-200/60 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-900/5";
+    case "Cosmetic":
+      return "bg-[#FAF7F0] border-gold-300/40 hover:border-gold-500/60 hover:shadow-lg hover:shadow-gold-900/5";
+    case "Surgical":
+      return "bg-[#F6EFF4] border-plum-200/60 hover:border-plum-500/50 hover:shadow-lg hover:shadow-plum-900/5";
+    case "Preventive":
+      return "bg-[#F2F7F4] border-emerald-200/60 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-900/5";
+    case "Orthodontics":
+      return "bg-[#FAF5EE] border-amber-200/60 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-900/5";
+    default:
+      return "bg-white border-ink-300 hover:border-gold-500";
+  }
+};
+
 export default function ServicesClient() {
   const [activeCategory, setActiveCategory] = useState<Category>("All");
 
@@ -110,7 +128,10 @@ export default function ServicesClient() {
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 key={service.slug}
                 whileHover={{ y: -5 }}
-                className="group flex flex-col items-start bg-white border border-ink-300 rounded-3xl p-6 md:p-8 transition-colors duration-300 hover:border-gold-500 cursor-pointer relative"
+                className={cn(
+                  "group flex flex-col items-start border rounded-3xl p-6 md:p-8 transition-all duration-300 cursor-pointer relative",
+                  getCardBgStyles(service.category)
+                )}
               >
                 {/* Header row: Emoji & Category */}
                 <div className="flex items-center justify-between w-full mb-6">

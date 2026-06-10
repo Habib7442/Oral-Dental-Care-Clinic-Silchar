@@ -1,6 +1,7 @@
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
+import HowWeTreat from "@/components/sections/how-we-treat";
 import ServicesGrid from "@/components/sections/services-grid";
 import ClinicGallery from "@/components/sections/clinic-gallery";
 import ReviewsWall from "@/components/sections/reviews-wall";
@@ -17,6 +18,9 @@ export default function Home() {
       <main className="flex-1 flex flex-col">
         {/* Flagship Brand Hero Section */}
         <Hero />
+
+        {/* How We Treat Clinical Section */}
+        <HowWeTreat />
 
         {/* Dynamic Services Grid Section */}
         <ServicesGrid />

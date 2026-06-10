@@ -77,7 +77,7 @@ export default function ReviewsWall({ isStandalone = false }: { isStandalone?: b
     <section
       id="reviews"
       className={cn(
-        "relative bg-porcelain border-b border-ink-300 overflow-hidden",
+        "relative bg-gold-200/20 border-b border-ink-300 overflow-hidden",
         isStandalone
           ? "pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
           : "py-24 md:py-32"

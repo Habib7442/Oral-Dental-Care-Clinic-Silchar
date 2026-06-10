@@ -20,11 +20,11 @@ export default function AboutClient() {
               Lead Clinician Profile & Vision
             </span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl font-medium tracking-tight text-plum-900 leading-tight mb-4">
-            About Dr. Devarati Ray
+          <h1 className="font-serif text-4xl sm:text-5xl font-medium tracking-tight leading-tight mb-4 text-plum-900">
+            About <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span> & <span className="text-plum-900 font-bold">Dr. Devarati Ray</span>
           </h1>
           <p className="text-ink-700 text-sm sm:text-base leading-relaxed">
-            Discover the patient-first philosophy, academic credentials, and rigorous clinical sterilization standards behind our 4.9★ rated practice in Silchar.
+            Discover why <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span> is recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>, built on the patient-first philosophy, academic credentials, and sterilization standards of <span className="text-plum-900 font-bold">Dr. Devarati Ray (BDS)</span>.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function AboutClient() {
 
             <div className="flex flex-col gap-5 text-ink-700 text-xs sm:text-sm leading-relaxed font-sans mt-2">
               <p>
-                Dr. Devarati is one of Silchar&apos;s most trusted, highly experienced dental surgeons. She has dedicated her career to providing boutique, doctor-led clinical dental services centered completely on patient hygiene, physical comfort, and lasting therapeutic success.
+                At <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span>, recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>, <span className="text-plum-900 font-bold">Dr. Devarati Ray</span> has dedicated her career to providing boutique, doctor-led clinical dental services centered completely on patient hygiene, physical comfort, and lasting therapeutic success.
               </p>
               <p>
                 Unlike chain clinics with rotating shifts of junior dentists, every single evaluation, root canal therapy, and cosmetic tooth alignment is <strong>personally diagnosed and performed by Dr. Devarati</strong>. This doctor-led consistency guarantees that your dental care remains in the hands of an experienced clinician who understands your individual dental history.

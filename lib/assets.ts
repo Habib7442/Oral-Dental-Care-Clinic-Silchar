@@ -28,4 +28,9 @@ export const ASSETS = {
     entrance: "/assets/clinic/oral-dental-care-clinic-entrance-silchar.webp",
     waitingArea: "/assets/clinic/oraldentalcare-clinic-waiting-area-silchar.webp",
   },
+  howWeTreat: {
+    one: "/assets/how-we-treat/1.webp",
+    two: "/assets/how-we-treat/2.webp",
+    three: "/assets/how-we-treat/3.webp",
+  },
 };

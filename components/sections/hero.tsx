@@ -112,7 +112,7 @@ Thank you!`;
               variants={childVariants}
               className="max-w-xl text-ink-700 font-sans text-sm sm:text-base leading-relaxed"
             >
-              Dr. Devarati Ray Dutta Chowdhury (BDS) delivers Silchar&apos;s leading doctor-led oral care. Experience advanced restorative and cosmetic treatments in a modern, highly sterile, and gentle setting.
+              Welcome to <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span>, recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>. Under the expert clinical leadership of <span className="text-plum-900 font-bold">Dr. Devarati Ray Dutta Chowdhury (BDS)</span>, we deliver premium, highly sterile, and pain-free treatments using state-of-the-art technology.
             </motion.p>
 
             {/* Appointment Request Booking Form */}
@@ -324,8 +324,8 @@ Thank you!`;
               <Award className="w-5 h-5 text-gold-700" />
             </div>
             <div className="flex flex-col">
-              <span className="font-semibold text-plum-900 leading-tight">25+ Years of Care</span>
-              <span className="text-xs text-ink-500 font-medium">Decades of oral expertise</span>
+              <span className="font-semibold text-plum-900 leading-tight">4+ Years of Care</span>
+              <span className="text-xs text-ink-500 font-medium">Dedicated oral expertise</span>
             </div>
           </div>
 

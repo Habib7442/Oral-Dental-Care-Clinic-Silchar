@@ -42,11 +42,13 @@
   --color-card: var(--card);
   
   --color-plum-100: #F1E7EE;
+  --color-plum-200: #E3CFDE;
   --color-plum-500: #742C66;
   --color-plum-600: #5E2453;
   --color-plum-700: #4E1C44;
   --color-plum-800: #3E1635;
   --color-plum-900: #2A0E26;
+  --color-plum-950: #1B0918;
   
   --color-gold-200: #ECDCAE;
   --color-gold-500: #C9A24B;

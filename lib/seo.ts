@@ -18,11 +18,11 @@ export function getMetadata({
   path = "",
   noIndex = false,
 }: MetadataProps = {}): Metadata {
-  const baseTitle = "Oral and Dental Care Clinic | Dr. Devarati Ray Dutta Chowdhury";
-  const finalTitle = title ? `${title} | Oral & Dental Care` : baseTitle;
+  const baseTitle = "Oral & Dental Care Clinic | Silchar's Best Dental Care | Dr. Devarati Ray Dutta Chowdhury";
+  const finalTitle = title ? `${title} | Oral & Dental Care Clinic` : baseTitle;
   
   const defaultDesc =
-    "Top-rated dental clinic in Silchar, led by Dr. Devarati Ray Dutta Chowdhury (BDS). 4.9★ rated. Expert root canals, implants, cosmetic crowns, alignment braces, and child dentistry.";
+    "Oral & Dental Care Clinic is Silchar's best dental care clinic, led by Dr. Devarati Ray Dutta Chowdhury (BDS). 4.9★ rated with 248+ reviews. Expert root canals, dental implants, crowns, veneers, and braces.";
   const finalDesc = description || defaultDesc;
 
   const canonicalUrl = `${CANONICAL_SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

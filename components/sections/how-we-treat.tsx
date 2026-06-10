@@ -2,50 +2,28 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { ASSETS } from "@/lib/assets";
 import { AnimatePresence, motion } from "framer-motion";
-import { Camera, ShieldCheck, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function ClinicGallery() {
+export default function HowWeTreat() {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
 
-  const galleryItems = [
+  const treatmentImages = [
     {
-      title: "Clinic Entrance",
-      description: "Welcoming, clean, and accessible entrance at Bilpar, Silchar.",
-      image: ASSETS.clinic.entrance,
-      className: "md:col-span-2",
+      src: ASSETS.howWeTreat.one,
+      alt: "Clinical treatment workflow and instrumentation standard",
+      aspect: "aspect-[784/1045]",
     },
     {
-      title: "Patient Lounge",
-      description: "Comfortable air-conditioned seating designed for patient relaxation.",
-      image: ASSETS.clinic.waitingArea,
-      className: "md:col-span-1",
+      src: ASSETS.howWeTreat.two,
+      alt: "Sterile diagnostics and patient oral evaluation process",
+      aspect: "aspect-[784/441]",
     },
     {
-      title: "Consultation Cabin",
-      description: "Private diagnostics, counseling, and digital treatment planning.",
-      image: ASSETS.clinic.consultationCabin,
-      className: "md:col-span-1",
-    },
-    {
-      title: "Multi-Chair Facility",
-      description: "Highly sterile multi-chair setup for parallel consultation capability.",
-      image: ASSETS.clinic.multiChairFacility,
-      className: "md:col-span-2",
-    },
-    {
-      title: "Treatment Room",
-      description: "Advanced dental chairs, autoclaved surgery kits, and micro-tools.",
-      image: ASSETS.clinic.treatmentRoom,
-      className: "md:col-span-2",
-    },
-    {
-      title: "Vetted Certifications",
-      description: "ASDC registrations, IDA affiliations, and quality credentials.",
-      image: ASSETS.clinic.awards,
-      className: "md:col-span-1",
+      src: ASSETS.howWeTreat.three,
+      alt: "Post-treatment examination and patient aesthetic care outcome",
+      aspect: "aspect-[784/440]",
     },
   ];
 
@@ -70,23 +48,23 @@ export default function ClinicGallery() {
         setActiveImageIndex(null);
       } else if (e.key === "ArrowLeft") {
         setActiveImageIndex((prev) =>
-          prev !== null && prev > 0 ? prev - 1 : galleryItems.length - 1
+          prev !== null && prev > 0 ? prev - 1 : treatmentImages.length - 1
         );
       } else if (e.key === "ArrowRight") {
         setActiveImageIndex((prev) =>
-          prev !== null && prev < galleryItems.length - 1 ? prev + 1 : 0
+          prev !== null && prev < treatmentImages.length - 1 ? prev + 1 : 0
         );
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeImageIndex, galleryItems.length]);
+  }, [activeImageIndex, treatmentImages.length]);
 
   return (
-    <section id="clinic-gallery" className="relative bg-white border-b border-ink-300 py-24 md:py-32 overflow-hidden">
-      {/* Structural visual accents */}
-      <div className="absolute top-0 right-0 w-48 h-48 border-t-8 border-r-8 border-gold-500/5 translate-x-16 -translate-y-16 pointer-events-none hidden lg:block" />
+    <section id="how-we-treat" className="relative bg-plum-900 py-24 md:py-32 border-b border-plum-950 overflow-hidden">
+      {/* Structural corner lines */}
+      <div className="absolute top-0 left-0 w-48 h-48 border-t-8 border-l-8 border-gold-500/5 -translate-x-16 -translate-y-16 pointer-events-none hidden lg:block" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         {/* Section Header */}
@@ -98,9 +76,8 @@ export default function ClinicGallery() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2 mb-4"
           >
-            <Camera className="w-4 h-4 text-gold-700" />
-            <span className="text-xs font-bold text-plum-900 uppercase tracking-widest font-sans">
-              Step Inside the Clinic
+            <span className="text-xs font-bold text-gold-200 uppercase tracking-widest font-sans">
+              Clinical Standards
             </span>
           </motion.div>
 
@@ -109,9 +86,9 @@ export default function ClinicGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-plum-900 leading-tight mb-6"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight mb-6"
           >
-            Our Clinical Infrastructure
+            How We Treat
           </motion.h2>
 
           <motion.p
@@ -119,9 +96,9 @@ export default function ClinicGallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-ink-700 text-sm sm:text-base leading-relaxed"
+            className="text-plum-100 text-sm sm:text-base leading-relaxed"
           >
-            Take a virtual tour of Dr. Devarati Ray&apos;s Oral & Dental Care Clinic in Silchar. We maintain a warm, modern, and highly sterile environment for all treatments.
+            Take an inside look at our actual treatment steps and procedural excellence. We maintain absolute precision, advanced instrumentation, and patient comfort guidelines at every stage of your dental care journey.
           </motion.p>
         </div>
 
@@ -131,38 +108,73 @@ export default function ClinicGallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
         >
-          <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[22rem]">
-            {galleryItems.map((item, i) => (
-              <BentoGridItem
-                key={i}
-                title={item.title}
-                description={item.description}
-                onClick={() => setActiveImageIndex(i)}
-                header={
-                  <div className="relative w-full h-full min-h-[180px] rounded-2xl overflow-hidden bg-porcelain border border-ink-300/10">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover/bento:scale-[1.03]"
-                      sizes="(max-w-7xl) 33vw, 50vw"
-                    />
-                  </div>
-                }
-                className={item.className}
-              />
-            ))}
-          </BentoGrid>
-        </motion.div>
+          {/* Column 1: Tall Vertical Image (Image 1) */}
+          <div className="md:col-span-5 lg:col-span-5">
+            <motion.div
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.99 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              onClick={() => setActiveImageIndex(0)}
+              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-white cursor-pointer"
+            >
+              <div className={`relative w-full ${treatmentImages[0].aspect}`}>
+                <Image
+                  src={treatmentImages[0].src}
+                  alt={treatmentImages[0].alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-w-7xl) 40vw, 95vw"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
 
-        {/* Bottom sterile verification notice */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 p-5 border border-ink-300 bg-porcelain rounded-3xl mt-16 max-w-4xl mx-auto text-center sm:text-left select-none">
-          <ShieldCheck className="w-6 h-6 text-gold-500 shrink-0" />
-          <p className="text-[11px] sm:text-xs font-medium text-ink-700 leading-relaxed font-sans">
-            <strong>Facility Notice:</strong> All areas displayed are subjected to daily clinical-grade sanitization protocols, utilizing vacuum Class-B autoclave processing for active instruments.
-          </p>
-        </div>
+          {/* Column 2: Stacked Landscape Images (Image 2 and 3) */}
+          <div className="md:col-span-7 lg:col-span-7 flex flex-col gap-6">
+            {/* Image 2 */}
+            <motion.div
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.99 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              onClick={() => setActiveImageIndex(1)}
+              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-white cursor-pointer"
+            >
+              <div className={`relative w-full ${treatmentImages[1].aspect}`}>
+                <Image
+                  src={treatmentImages[1].src}
+                  alt={treatmentImages[1].alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-w-7xl) 60vw, 95vw"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* Image 3 */}
+            <motion.div
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.99 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              onClick={() => setActiveImageIndex(2)}
+              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-white cursor-pointer"
+            >
+              <div className={`relative w-full ${treatmentImages[2].aspect}`}>
+                <Image
+                  src={treatmentImages[2].src}
+                  alt={treatmentImages[2].alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-w-7xl) 60vw, 95vw"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Lightbox Modal */}
@@ -193,7 +205,7 @@ export default function ClinicGallery() {
               onClick={(e) => {
                 e.stopPropagation();
                 setActiveImageIndex((prev) =>
-                  prev !== null && prev > 0 ? prev - 1 : galleryItems.length - 1
+                  prev !== null && prev > 0 ? prev - 1 : treatmentImages.length - 1
                 );
               }}
               className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-[210] p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-200 border border-white/10 hover:border-gold-500/50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold-500 cursor-pointer hidden sm:flex"
@@ -207,7 +219,7 @@ export default function ClinicGallery() {
               onClick={(e) => {
                 e.stopPropagation();
                 setActiveImageIndex((prev) =>
-                  prev !== null && prev < galleryItems.length - 1 ? prev + 1 : 0
+                  prev !== null && prev < treatmentImages.length - 1 ? prev + 1 : 0
                 );
               }}
               className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-[210] p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-200 border border-white/10 hover:border-gold-500/50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gold-500 cursor-pointer hidden sm:flex"
@@ -226,28 +238,21 @@ export default function ClinicGallery() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Image Frame */}
-              <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+              <div className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
                 <Image
-                  src={galleryItems[activeImageIndex].image}
-                  alt={galleryItems[activeImageIndex].title}
+                  src={treatmentImages[activeImageIndex].src}
+                  alt={treatmentImages[activeImageIndex].alt}
                   fill
                   className="object-contain"
-                  sizes="(max-w-5xl) 90vw, 80vw"
+                  sizes="(max-w-5xl) 90vw, 85vw"
                   priority
                 />
               </div>
 
-              {/* Caption Overlay details */}
-              <div className="w-full text-center px-4 mt-2">
-                <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-gold-200 mb-1">
-                  {galleryItems[activeImageIndex].title}
-                </h3>
-                <p className="font-sans text-xs sm:text-sm text-white/80 max-w-2xl mx-auto leading-relaxed">
-                  {galleryItems[activeImageIndex].description}
-                </p>
-                {/* Index Counter */}
-                <div className="font-sans text-xs text-white/40 mt-3">
-                  {activeImageIndex + 1} / {galleryItems.length}
+              {/* Bottom Details (Index Indicator) */}
+              <div className="w-full text-center px-4">
+                <div className="font-sans text-sm text-white/60">
+                  Image {activeImageIndex + 1} of {treatmentImages.length}
                 </div>
               </div>
 
@@ -256,7 +261,7 @@ export default function ClinicGallery() {
                 <button
                   onClick={() =>
                     setActiveImageIndex((prev) =>
-                      prev !== null && prev > 0 ? prev - 1 : galleryItems.length - 1
+                      prev !== null && prev > 0 ? prev - 1 : treatmentImages.length - 1
                     )
                   }
                   className="p-3 rounded-full bg-white/10 active:scale-95 text-white border border-white/10 focus:outline-none cursor-pointer"
@@ -267,7 +272,7 @@ export default function ClinicGallery() {
                 <button
                   onClick={() =>
                     setActiveImageIndex((prev) =>
-                      prev !== null && prev < galleryItems.length - 1 ? prev + 1 : 0
+                      prev !== null && prev < treatmentImages.length - 1 ? prev + 1 : 0
                     )
                   }
                   className="p-3 rounded-full bg-white/10 active:scale-95 text-white border border-white/10 focus:outline-none cursor-pointer"

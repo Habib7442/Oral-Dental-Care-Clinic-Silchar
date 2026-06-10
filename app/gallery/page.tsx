@@ -2,23 +2,23 @@ import React from "react";
 import { getMetadata } from "@/lib/seo";
 import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
-import SmileGallery from "@/components/sections/smile-gallery";
+import GalleryClient from "./gallery-client";
 
 export const metadata = getMetadata({
-  title: "Smile Gallery | Before & After Transformations",
-  description: "View verified cosmetic and restorative before-and-after smile transformations. Interactive veneers, crowns, clear aligners, and whitening results by Dr. Devarati in Silchar.",
-  path: "/smile-gallery"
+  title: "Clinical Gallery | Camps & Outreaches",
+  description: "View verified clinical outreach initiatives, school hygiene camps, and community checkup programs by Dr. Devarati Ray in Silchar.",
+  path: "/gallery"
 });
 
-export default function SmileGalleryPage() {
+export default function GalleryPage() {
   return (
     <div className="flex flex-col min-h-screen bg-porcelain">
       {/* Global Navigation Header */}
       <Navigation />
 
-      {/* Main Smile Gallery Content */}
+      {/* Main Gallery Content */}
       <main className="flex-1 flex flex-col">
-        <SmileGallery isStandalone={true} />
+        <GalleryClient />
       </main>
 
       {/* Global Brand Footer */}

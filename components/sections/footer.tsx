@@ -18,7 +18,7 @@ export default function Footer() {
 
   const quickLinks = [
     { label: "About the Clinic", href: "/about" },
-    { label: "Smile Gallery", href: "/smile-gallery" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Patient Reviews", href: "/reviews" },
     { label: "Frequently Asked Questions", href: "/faq" },
     { label: "Contact & Directions", href: "/contact" },

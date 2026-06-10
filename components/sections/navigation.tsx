@@ -33,7 +33,7 @@ export default function Navigation() {
   const navLinks = [
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Smile Gallery", href: "/smile-gallery" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Reviews", href: "/reviews" },
     { label: "FAQs", href: "/faq" },
     { label: "Contact", href: "/contact" },

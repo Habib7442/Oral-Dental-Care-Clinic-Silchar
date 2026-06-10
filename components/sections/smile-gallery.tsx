@@ -69,7 +69,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
     <section
       id="smile-gallery"
       className={cn(
-        "relative bg-porcelain border-b border-ink-300 overflow-hidden",
+        "relative bg-plum-950 border-b border-plum-900 overflow-hidden",
         isStandalone
           ? "pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
           : "py-24 md:py-32"
@@ -89,7 +89,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             className="flex items-center gap-2 mb-4"
           >
             <div className="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse" />
-            <span className="text-xs font-bold text-plum-900 uppercase tracking-widest font-sans">
+            <span className="text-xs font-bold text-gold-200 uppercase tracking-widest font-sans">
               Clinical transformations
             </span>
           </motion.div>
@@ -99,7 +99,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-plum-900 leading-tight mb-6"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight mb-6"
           >
             Before & After Smile Gallery
           </motion.h2>
@@ -109,14 +109,14 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-ink-700 text-sm sm:text-base leading-relaxed"
+            className="text-plum-100 text-sm sm:text-base leading-relaxed"
           >
             Explore actual visual transformations achieved by Dr. Devarati. Drag the golden divider handle left or right across the clinical cases to reveal the results.
           </motion.p>
         </div>
 
         {/* Stateful Case Tabs Selector */}
-        <div className="flex flex-wrap justify-center items-center gap-2.5 mb-12 border-b border-ink-300/40 pb-2 w-full max-w-2xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-2.5 mb-12 border-b border-plum-900/60 pb-2 w-full max-w-2xl mx-auto">
           {galleryCases.map((c) => {
             const isSelected = activeTab === c.id;
             return (
@@ -136,13 +136,13 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 ) : (
-                  <span className="absolute inset-0 bg-white border border-ink-300 hover:border-plum-800 rounded-full z-0" />
+                  <span className="absolute inset-0 bg-plum-900/60 border border-plum-800 rounded-full z-0" />
                 )}
 
                 {/* Text Layer */}
                 <span className={cn(
                   "relative z-10 transition-colors font-sans",
-                  isSelected ? "text-porcelain" : "text-ink-700 hover:text-plum-900"
+                  isSelected ? "text-porcelain" : "text-plum-200 hover:text-white"
                 )}>
                   {c.id === "veneers" ? "👑 Veneers & Crowns" : c.id === "aligners" ? "😬 Aligners" : "✨ Whitening"}
                 </span>
@@ -157,7 +157,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
           {/* Left Column: Draggable Slider Interface */}
           <div className="lg:col-span-7 w-full flex flex-col items-center">
             
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-ink-300 select-none bg-white">
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-plum-800 select-none bg-plum-900">
               {/* BEFORE IMAGE (Static in the background) */}
               <img
                 src={activeCase.beforeImage}
@@ -211,7 +211,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             </div>
             
             {/* Guide micro text */}
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-ink-500 mt-4 animate-pulse">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gold-200/60 mt-4 animate-pulse">
               ◀ Drag Handle to Compare smile ▶
             </span>
           </div>
@@ -220,43 +220,43 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
           <div className="lg:col-span-5 w-full flex flex-col items-start gap-6 text-left">
             
             <div className="flex flex-col gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-gold-500/10 text-gold-700 border border-gold-500/20 rounded-full font-sans inline-block w-fit">
+              <span className="text-[10px] font-bold uppercase tracking-widest px-3 py-1 bg-gold-500/10 text-gold-200 border border-gold-500/30 rounded-full font-sans inline-block w-fit">
                 ✦ {activeCase.category} Case Study
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-plum-900 leading-tight">
+              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white leading-tight">
                 {activeCase.title}
               </h3>
-              <p className="text-ink-700 text-xs sm:text-sm leading-relaxed mt-2 font-sans">
+              <p className="text-plum-100 text-xs sm:text-sm leading-relaxed mt-2 font-sans">
                 {activeCase.description}
               </p>
             </div>
 
             {/* Case Details Block */}
-            <div className="flex flex-col gap-4 w-full border-t border-ink-300/60 pt-6 mt-2">
+            <div className="flex flex-col gap-4 w-full border-t border-plum-800 pt-6 mt-2">
               <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Clinical Challenge</span>
-                <p className="text-xs sm:text-sm text-ink-900 font-medium leading-relaxed">
+                <span className="text-[10px] font-bold text-plum-200/80 uppercase tracking-wider">Clinical Challenge</span>
+                <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
                   {activeCase.challenge}
                 </p>
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Applied Therapy</span>
-                <p className="text-xs sm:text-sm text-ink-900 font-medium leading-relaxed">
+                <span className="text-[10px] font-bold text-plum-200/80 uppercase tracking-wider">Applied Therapy</span>
+                <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
                   {activeCase.therapy}
                 </p>
               </div>
             </div>
 
             {/* Metrics Stripe */}
-            <div className="grid grid-cols-2 gap-4 w-full border-y border-ink-300/40 py-5 my-2">
+            <div className="grid grid-cols-2 gap-4 w-full border-y border-plum-800 py-5 my-2">
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Treatment Duration</span>
-                <span className="text-sm font-bold text-plum-900 mt-1">{activeCase.duration}</span>
+                <span className="text-[10px] font-bold text-plum-200/80 uppercase tracking-wider">Treatment Duration</span>
+                <span className="text-sm font-bold text-gold-200 mt-1">{activeCase.duration}</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider">Patient Outcome</span>
-                <span className="text-sm font-bold text-gold-700 mt-1">{activeCase.outcome}</span>
+                <span className="text-[10px] font-bold text-plum-200/80 uppercase tracking-wider">Patient Outcome</span>
+                <span className="text-sm font-bold text-gold-500 mt-1">{activeCase.outcome}</span>
               </div>
             </div>
 
@@ -264,7 +264,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             <div className="flex flex-col sm:flex-row gap-3 w-full">
               <Link
                 href="/book"
-                className="flex-1 flex items-center justify-center gap-2 bg-plum-800 hover:bg-plum-900 text-porcelain text-xs font-bold uppercase tracking-wider py-4 px-6 rounded-full shadow-[0_2px_8px_rgba(62,22,53,0.15)] transition-all cursor-pointer text-center"
+                className="flex-1 flex items-center justify-center gap-2 bg-plum-800 hover:bg-plum-700 text-porcelain text-xs font-bold uppercase tracking-wider py-4 px-6 rounded-full shadow-[0_2px_8px_rgba(62,22,53,0.15)] transition-all cursor-pointer text-center"
               >
                 <Calendar className="w-4 h-4 text-gold-200" />
                 <span>Request Smile Consultation</span>
@@ -275,9 +275,9 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
         </div>
 
         {/* Sterile Clinical Consent Warning Banner */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 p-5 border border-ink-300 bg-white rounded-3xl mt-16 max-w-4xl mx-auto text-center sm:text-left select-none">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 p-5 border border-plum-800 bg-plum-900 rounded-3xl mt-16 max-w-4xl mx-auto text-center sm:text-left select-none">
           <ShieldCheck className="w-6 h-6 text-gold-500 shrink-0" />
-          <p className="text-[11px] sm:text-xs font-medium text-ink-700 leading-relaxed font-sans">
+          <p className="text-[11px] sm:text-xs font-medium text-plum-100 leading-relaxed font-sans">
             <strong>Clinical Photography Notice:</strong> All dental transformations displayed are verified patient cases treated exclusively at Oral and Dental Care Clinic. Photos are shared with explicit, signed patient clinical consent.
           </p>
         </div>
