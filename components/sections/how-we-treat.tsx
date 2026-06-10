@@ -111,7 +111,7 @@ export default function HowWeTreat() {
           className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start"
         >
           {/* Column 1: Tall Vertical Image (Image 1) */}
-          <div className="md:col-span-5 lg:col-span-5">
+          <div className="md:col-span-4">
             <motion.div
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.99 }}
@@ -125,15 +125,33 @@ export default function HowWeTreat() {
                   alt={treatmentImages[0].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 40vw, 95vw"
+                  sizes="(max-w-7xl) 33vw, 95vw"
                   priority
                 />
               </div>
             </motion.div>
           </div>
 
-          {/* Column 2: Stacked Landscape Images (Image 2 and 3) */}
-          <div className="md:col-span-7 lg:col-span-7 flex flex-col gap-6">
+          {/* Column 2: YouTube Shorts Video (Privacy-Enhanced Embed with Logo Cropping) */}
+          <div className="md:col-span-4">
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-plum-950 w-full aspect-[9/16]"
+            >
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/8Z0apdk32-4?modestbranding=1&rel=0&iv_load_policy=3&controls=0"
+                title="Oral & Dental Clinic Treatment Video Case Study"
+                className="absolute inset-0 w-full h-full border-0 rounded-3xl scale-[1.22] origin-center"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
+            </motion.div>
+          </div>
+
+          {/* Column 3: Stacked Landscape Images (Image 2 and 3) */}
+          <div className="md:col-span-4 flex flex-col gap-6">
             {/* Image 2 */}
             <motion.div
               whileHover={{ y: -4 }}
@@ -148,7 +166,7 @@ export default function HowWeTreat() {
                   alt={treatmentImages[1].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 60vw, 95vw"
+                  sizes="(max-w-7xl) 33vw, 95vw"
                   priority
                 />
               </div>
@@ -168,7 +186,7 @@ export default function HowWeTreat() {
                   alt={treatmentImages[2].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 60vw, 95vw"
+                  sizes="(max-w-7xl) 33vw, 95vw"
                   priority
                 />
               </div>
