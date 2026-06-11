@@ -59,7 +59,7 @@ export default function TermsOfServicePage() {
                   2. No Medical Advice / Doctor-Patient Relationship
                 </h2>
                 <p className="font-sans text-sm sm:text-base text-ink-700 leading-relaxed mb-6">
-                  The information provided on this website—including treatments, duration guidelines, and FAQ explanations—is for general educational and informational purposes only. It is not a substitute for professional clinical diagnosis or face-to-face consultation. Submission of booking forms or contacting the clinic does not establish a formal doctor-patient relationship until you have visited the facility and been evaluated by <strong className="text-plum-900">Dr. Devarati Ray Dutta Chowdhury (BDS)</strong>.
+                  The information provided on this website—including treatments, duration guidelines, and FAQ explanations—is for general educational and informational purposes only. It is not a substitute for professional clinical diagnosis or face-to-face consultation. Submission of booking forms or contacting the clinic does not establish a formal doctor-patient relationship until you have visited the facility and been evaluated by <strong className="text-plum-900">Dr. Devarati Ray Dutta Chowdhury (BDS, MCh)</strong>.
                 </p>
 
                 <h2 className="font-serif text-lg sm:text-xl font-semibold text-plum-800 mt-8 mb-4">
@@ -110,8 +110,7 @@ export default function TermsOfServicePage() {
                 </p>
                 <div className="bg-porcelain border border-ink-300 rounded-2xl p-6 flex flex-col gap-2.5 text-sm font-sans text-ink-700">
                   <p><strong className="text-plum-900">Clinic Name:</strong> Oral and Dental Care Clinic</p>
-                  <p><strong className="text-plum-900">Lead Dentist:</strong> Dr. Devarati Ray Dutta Chowdhury (BDS)</p>
-                  <p><strong className="text-plum-900">Registration Number:</strong> ASDC Reg No: 3376-A</p>
+                  <p><strong className="text-plum-900">Lead Dentist:</strong> Dr. Devarati Ray Dutta Chowdhury (BDS, MCh)</p>
                   <p><strong className="text-plum-900">Address:</strong> Lochan Bairagi Road, Bilpar, Silchar, Assam 788001 (near Rahul Medicos)</p>
                   <p><strong className="text-plum-900">Phone Hotline:</strong> +91 94354 92181</p>
                 </div>

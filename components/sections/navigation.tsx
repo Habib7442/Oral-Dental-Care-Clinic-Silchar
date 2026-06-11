@@ -80,7 +80,7 @@ export default function Navigation() {
                 "text-[10px] uppercase tracking-widest font-semibold font-sans leading-none mt-1.5 transition-colors",
                 scrolled ? "text-gold-200" : "text-gold-700"
               )}>
-                Dr. Devarati Ray (BDS)
+                Dr. Devarati Ray (BDS, MCh)
               </span>
             </div>
           </Link>
@@ -186,7 +186,7 @@ export default function Navigation() {
             />
             <div className="flex flex-col">
               <SheetTitle className="font-serif text-base font-semibold tracking-wide text-porcelain leading-none">
-                Dr. Devarati Ray (BDS)
+                Dr. Devarati Ray (BDS, MCh)
               </SheetTitle>
               <SheetDescription className="text-[10px] text-gold-500 font-sans tracking-widest uppercase font-semibold leading-none mt-1.5">
                 Oral & Dental Care

@@ -112,7 +112,7 @@ Thank you!`;
               variants={childVariants}
               className="max-w-xl text-ink-700 font-sans text-sm sm:text-base leading-relaxed"
             >
-              Welcome to <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span>, recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>. Under the expert clinical leadership of <span className="text-plum-900 font-bold">Dr. Devarati Ray Dutta Chowdhury (BDS)</span>, we deliver premium, highly sterile, and pain-free treatments using state-of-the-art technology.
+              Welcome to <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span>, recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>. Under the expert clinical leadership of <span className="text-plum-900 font-bold">Dr. Devarati Ray Dutta Chowdhury (BDS, MCh)</span>, we deliver premium, highly sterile, and pain-free treatments using state-of-the-art technology.
             </motion.p>
 
             {/* Appointment Request Booking Form */}

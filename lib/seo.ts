@@ -22,7 +22,7 @@ export function getMetadata({
   const finalTitle = title ? `${title} | Oral & Dental Care Clinic` : baseTitle;
   
   const defaultDesc =
-    "Oral & Dental Care Clinic is Silchar's best dental care clinic, led by Dr. Devarati Ray Dutta Chowdhury (BDS). 4.9★ rated with 248+ reviews. Expert root canals, dental implants, crowns, veneers, and braces.";
+    "Oral & Dental Care Clinic is Silchar's best dental care clinic, led by Dr. Devarati Ray Dutta Chowdhury (BDS, MCh). 4.9★ rated with 248+ reviews. Expert root canals, dental implants, crowns, veneers, and braces.";
   const finalDesc = description || defaultDesc;
 
   const canonicalUrl = `${CANONICAL_SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
@@ -129,7 +129,7 @@ export function getDentistSchema() {
     "founder": {
       "@type": "Person",
       "name": "Dr. Devarati Ray Dutta Chowdhury",
-      "jobTitle": "Lead Dentist (BDS)"
+      "jobTitle": "Lead Dentist (BDS, MCh)"
     },
     "sameAs": [
       "https://maps.google.com/?cid=14605927532328108426" // [GBP maps target]

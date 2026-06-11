@@ -102,8 +102,7 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <div className="bg-porcelain border border-ink-300 rounded-2xl p-6 flex flex-col gap-2.5 text-sm font-sans text-ink-700">
                   <p><strong className="text-plum-900">Clinic Name:</strong> Oral and Dental Care Clinic</p>
-                  <p><strong className="text-plum-900">Lead Dentist:</strong> Dr. Devarati Ray Dutta Chowdhury (BDS)</p>
-                  <p><strong className="text-plum-900">Registration Number:</strong> ASDC Reg No: 3376-A</p>
+                  <p><strong className="text-plum-900">Lead Dentist:</strong> Dr. Devarati Ray Dutta Chowdhury (BDS, MCh)</p>
                   <p><strong className="text-plum-900">Address:</strong> Lochan Bairagi Road, Bilpar, Silchar, Assam 788001 (near Rahul Medicos)</p>
                   <p><strong className="text-plum-900">Phone Hotline:</strong> +91 94354 92181</p>
                 </div>

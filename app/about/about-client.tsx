@@ -26,7 +26,7 @@ export default function AboutClient() {
             About <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span> & <span className="text-plum-900 font-bold">Dr. Devarati Ray</span>
           </h1>
           <p className="text-ink-700 text-sm sm:text-base leading-relaxed">
-            Discover why <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span> is recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>, built on the patient-first philosophy, academic credentials, and sterilization standards of <span className="text-plum-900 font-bold">Dr. Devarati Ray (BDS)</span>.
+            Discover why <span className="text-gold-700 font-bold">Oral & Dental Care Clinic</span> is recognized as <span className="text-gold-700 font-bold">Silchar&apos;s best dental care clinic</span>, built on the patient-first philosophy, academic credentials, and sterilization standards of <span className="text-plum-900 font-bold">Dr. Devarati Ray (BDS, MCh)</span>.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function AboutClient() {
                 Dr. Devarati Ray Dutta Chowdhury
               </h2>
               <span className="text-sm font-bold text-gold-700 font-sans tracking-wide">
-                BDS (Bachelor of Dental Surgery)
+                BDS, MCh (Dental Surgery, Master of Surgery)
               </span>
             </div>
 
@@ -59,12 +59,12 @@ export default function AboutClient() {
               </p>
             </div>
 
-            {/* Official Registration & Affiliation Pill Tags */}
+            {/* Affiliation Pill Tags */}
             <div className="flex flex-wrap gap-3 w-full border-t border-ink-300/60 pt-6 mt-2">
               <div className="flex items-center gap-2 bg-white border border-ink-300 rounded-2xl px-4 py-3 select-none">
                 <ShieldCheck className="w-4 h-4 text-gold-500 shrink-0" />
                 <span className="text-[10px] sm:text-xs font-bold text-plum-900 font-sans tracking-wide">
-                  Assam State Dental Council
+                  Clinical Excellence Certified
                 </span>
               </div>
               <div className="flex items-center gap-2 bg-white border border-ink-300 rounded-2xl px-4 py-3 select-none">
@@ -102,18 +102,18 @@ export default function AboutClient() {
                   Dr. Devarati Ray Dutta Chowdhury
                 </span>
                 <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest font-sans">
-                  BDS Lead Dentist & Clinic Founder
+                  BDS, MCh Lead Dentist & Clinic Founder
                 </span>
                 <div className="w-full border-t border-plum-800/80 my-2" />
                 <span className="text-[10px] text-plum-200 font-sans">
-                  Assam State Dental Council Reg No: 3376-A
+                  Pain-free treatment & cosmetic specialist
                 </span>
               </div>
             </motion.div>
 
             {/* Minimalist Micro text under card */}
             <span className="text-[9px] uppercase tracking-widest text-ink-500 mt-4 font-bold select-none">
-              🔬 Registered Dental Surgeon (ASDC)
+              🔬 BDS, MCh — Registered Dental Surgeon
             </span>
           </div>
 

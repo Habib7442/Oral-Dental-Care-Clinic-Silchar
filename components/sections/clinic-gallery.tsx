@@ -43,7 +43,7 @@ export default function ClinicGallery() {
     },
     {
       title: "Vetted Certifications",
-      description: "ASDC registrations, IDA affiliations, and quality credentials.",
+      description: "Clinical qualifications, IDA affiliations, and quality credentials.",
       image: ASSETS.clinic.awards,
       className: "md:col-span-1",
     },
