@@ -2,8 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShieldCheck, Award, Star, Heart, ShieldAlert } from "lucide-react";
 import { motion } from "framer-motion";
+import { ASSETS } from "@/lib/assets";
 
 export default function AboutClient() {
   return (
@@ -11,7 +13,7 @@ export default function AboutClient() {
 
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
-        
+
         {/* Page Title & Eyebrow */}
         <div className="flex flex-col items-start text-left max-w-3xl mb-16">
           <div className="flex items-center gap-2 mb-4">
@@ -30,7 +32,7 @@ export default function AboutClient() {
 
         {/* Two Column Layout: Biography vs Minimalist Typographic Monogram Card */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start w-full mb-24">
-          
+
           {/* Left Column: Biography & Credentials */}
           <div className="lg:col-span-7 flex flex-col items-start gap-6 text-left">
             <div className="flex flex-col gap-2.5">
@@ -75,56 +77,40 @@ export default function AboutClient() {
 
           </div>
 
-          {/* Right Column: Custom Premium Typographic Monogram Card */}
+          {/* Right Column: Lead Clinician Portrait Card */}
           <div className="lg:col-span-5 w-full flex flex-col items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.98, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full aspect-[4/5] rounded-3xl bg-white border border-ink-300 flex flex-col items-center justify-between p-8 md:p-12 relative overflow-hidden"
+              className="w-full aspect-[4/5] rounded-3xl bg-white border border-ink-300 relative overflow-hidden"
             >
+              {/* Actual Lead Clinician Image */}
+              <Image
+                src={ASSETS.doctor}
+                alt="Dr. Devarati Ray Dutta Chowdhury - Lead Dentist"
+                fill
+                className="object-cover animate-fade-in"
+                sizes="(max-w-7xl) 100vw, 800px"
+                priority
+                quality={100}
+              />
 
-
-              {/* Top Row: Clinical Credentials Tag */}
-              <div className="flex justify-center z-10 w-full">
-                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 bg-plum-900 text-porcelain rounded-full font-sans select-none">
-                  ✦ Clinical Registry Vetted ✦
-                </span>
-              </div>
-
-              {/* Central Premium Serifs Monogram seal */}
-              <div className="flex flex-col items-center justify-center my-6 z-10 relative">
-                {/* stylized circular gold border overlay */}
-                <div className="w-36 h-36 rounded-full border border-gold-500/35 flex items-center justify-center bg-porcelain relative">
-                  {/* Inner golden ring */}
-                  <div className="absolute inset-2 rounded-full border border-dashed border-gold-500/40" />
-                  
-                  {/* Monogram letters */}
-                  <span className="font-serif text-5xl font-medium tracking-wider text-plum-900 select-none z-10">
-                    DR
-                  </span>
-                </div>
-              </div>
-
-              {/* Bottom Row: Doctor Details block */}
-              <div className="flex flex-col items-center text-center z-10 w-full">
-                <span className="font-serif text-lg font-bold text-plum-900">
+              {/* Credentials Badge Overlay */}
+              <div className="absolute bottom-4 left-4 right-4 bg-plum-900/90 backdrop-blur-sm border border-plum-800 text-porcelain p-4 rounded-2xl flex flex-col gap-0.5 z-20 cursor-default select-none shadow-[0_4px_12px_rgba(27,19,32,0.15)]">
+                <span className="font-serif text-base font-bold text-white">
                   Dr. Devarati Ray Dutta Chowdhury
                 </span>
-                <span className="text-[10px] font-bold text-gold-700 uppercase tracking-widest mt-1 font-sans">
+                <span className="text-[10px] font-bold text-gold-500 uppercase tracking-widest font-sans">
                   BDS Lead Dentist & Clinic Founder
                 </span>
-                <div className="w-full border-t border-ink-300/40 my-4" />
-                <div className="flex items-center gap-1">
-                  <Star className="w-4 h-4 text-gold-500 fill-gold-500 shrink-0" />
-                  <span className="text-xs font-semibold text-ink-500 font-sans">
-                    Vetted 4.9★ Lead Dental Specialist
-                  </span>
-                </div>
+                <div className="w-full border-t border-plum-800/80 my-2" />
+                <span className="text-[10px] text-plum-200 font-sans">
+                  Assam State Dental Council Reg No: 3376-A
+                </span>
               </div>
-
             </motion.div>
-            
+
             {/* Minimalist Micro text under card */}
             <span className="text-[9px] uppercase tracking-widest text-ink-500 mt-4 font-bold select-none">
               🔬 Registered Dental Surgeon (ASDC)
@@ -135,7 +121,7 @@ export default function AboutClient() {
 
         {/* Section 2: Clinical Philosophy & Moats Grid */}
         <div className="flex flex-col items-start w-full border-t border-ink-300/60 pt-16 text-left">
-          
+
           <div className="flex flex-col gap-2.5 mb-12 max-w-3xl">
             <span className="text-[10px] font-bold text-ink-500 uppercase tracking-wider font-sans">
               Sterile Standards & Values
@@ -150,7 +136,7 @@ export default function AboutClient() {
 
           {/* Grid Layout of 4 Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
-            
+
             {/* Pillar 1: Sterilization Moat */}
             <div className="bg-white border border-ink-300 rounded-3xl p-6 md:p-8 flex flex-col items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center text-gold-700 shrink-0">
