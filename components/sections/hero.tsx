@@ -25,6 +25,49 @@ export default function Hero() {
   const [treatment, setTreatment] = useState("");
   const [date, setDate] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Stacked Card Component Data & States
+  const cardsData = [
+    {
+      id: 2,
+      src: ASSETS.howWeTreat.three,
+      alt: "Post-treatment examination and patient aesthetic care outcome",
+    },
+    {
+      id: 1,
+      src: ASSETS.howWeTreat.two,
+      alt: "Sterile diagnostics and patient oral evaluation process",
+    },
+    {
+      id: 0,
+      src: ASSETS.howWeTreat.one,
+      alt: "Clinical treatment workflow and instrumentation standard",
+    },
+  ];
+
+  const [cards, setCards] = useState(cardsData);
+  const [hovered, setHovered] = useState(false);
+
+  const handleShuffle = () => {
+    setCards((prev) => {
+      const next = [...prev];
+      const last = next.pop();
+      if (last !== undefined) {
+        next.unshift(last);
+      }
+      return next;
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -268,34 +311,107 @@ Thank you!`;
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Premium Asset Box */}
+          {/* Right Column: Premium Interactive Stacked Card Deck */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, x: 24 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
-            className="lg:col-span-5 relative w-full flex items-center justify-center z-10"
+            className="lg:col-span-5 relative w-full flex items-center justify-center z-10 min-h-[380px] sm:min-h-[450px] lg:min-h-0 px-6 sm:px-12 lg:px-0"
           >
-            <div className="relative w-full aspect-[4/5] max-w-md">
-              {/* Single clean card container with soft solid white/porcelain background - no double box, no shadow, no circle */}
-              <div className="w-full h-full rounded-3xl overflow-hidden border border-ink-300 bg-white/80 relative z-0">
-                <Image
-                  src={ASSETS.hero.portrait}
-                  alt="Oral and Dental Care Clinic Silchar"
-                  fill
-                  priority
-                  className="object-cover animate-fade-in relative z-10"
-                  sizes="(max-w-7xl) 100vw, 450px"
-                />
+            <div 
+              className="relative w-full aspect-[4/5] max-w-md select-none"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
+              {cards.map((card) => {
+                const stackIndex = cards.findIndex((c) => c.id === card.id);
+                const distanceFromTop = cards.length - 1 - stackIndex;
+                const isTop = distanceFromTop === 0;
+                
+                const zIndex = stackIndex * 10;
+                
+                // Stack layout: Top card is scale 1. Each card below scales down slightly.
+                const scaleValue = isTop ? 1 : 1 - distanceFromTop * 0.04;
+                
+                // Standard offset values to stack cards peeking to the left (like the second image sketch)
+                let xOffset = 0;
+                let yOffset = 0;
+                let rotateValue = 0;
 
-                {/* Rating display badge overlay (shadow-lg removed to stay strictly flat and clean per client requests) */}
-                <motion.div 
-                  whileHover={{ y: -3, scale: 1.03 }}
-                  className="absolute bottom-4 right-4 bg-plum-900/90 backdrop-blur-sm border border-plum-800 text-porcelain p-3.5 rounded-2xl flex flex-col gap-0.5 max-w-[150px] cursor-default select-none z-20"
-                >
-                  <span className="text-xs font-semibold text-gold-500">Google reviews</span>
-                  <span className="font-serif text-lg font-bold leading-none text-white">4.9 ★ stars</span>
-                </motion.div>
-              </div>
+                if (isMobile) {
+                  // Half the offsets on mobile to prevent clipping screen edges
+                  if (distanceFromTop === 0) {
+                    xOffset = hovered ? 6 : 0;
+                    yOffset = hovered ? -3 : 0;
+                    rotateValue = hovered ? 1 : 0;
+                  } else if (distanceFromTop === 1) {
+                    xOffset = hovered ? -18 : -8;
+                    yOffset = hovered ? -1 : 0;
+                    rotateValue = hovered ? -3 : -1;
+                  } else if (distanceFromTop === 2) {
+                    xOffset = hovered ? -36 : -16;
+                    yOffset = hovered ? -2 : 0;
+                    rotateValue = hovered ? -6 : -2;
+                  } else {
+                    xOffset = hovered ? -36 : -16;
+                    yOffset = hovered ? -2 : 0;
+                    rotateValue = hovered ? -6 : -2;
+                  }
+                } else {
+                  if (distanceFromTop === 0) {
+                    xOffset = hovered ? 12 : 0;
+                    yOffset = hovered ? -6 : 0;
+                    rotateValue = hovered ? 2 : 0;
+                  } else if (distanceFromTop === 1) {
+                    xOffset = hovered ? -36 : -16;
+                    yOffset = hovered ? -2 : 0;
+                    rotateValue = hovered ? -6 : -2;
+                  } else if (distanceFromTop === 2) {
+                    xOffset = hovered ? -72 : -32;
+                    yOffset = hovered ? -4 : 0;
+                    rotateValue = hovered ? -12 : -4;
+                  } else {
+                    xOffset = hovered ? -72 : -32;
+                    yOffset = hovered ? -4 : 0;
+                    rotateValue = hovered ? -12 : -4;
+                  }
+                }
+
+                return (
+                  <motion.div
+                    key={card.id}
+                    style={{ zIndex }}
+                    animate={{
+                      x: xOffset,
+                      y: yOffset,
+                      scale: scaleValue,
+                      rotate: rotateValue,
+                      opacity: distanceFromTop > 2 ? 0 : 1,
+                    }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 22,
+                    }}
+                    onClick={handleShuffle}
+                    className={cn(
+                      "absolute inset-0 w-full h-full bg-white border border-ink-300 rounded-3xl p-3 shadow-[0_8px_32px_rgba(27,19,32,0.05)] cursor-pointer select-none origin-bottom flex flex-col",
+                      distanceFromTop > 2 ? "pointer-events-none" : "pointer-events-auto"
+                    )}
+                  >
+                    <div className="relative w-full h-full rounded-2xl overflow-hidden bg-porcelain">
+                      <Image
+                        src={card.src}
+                        alt={card.alt}
+                        fill
+                        className="object-cover pointer-events-none"
+                        sizes="(max-w-7xl) 100vw, 400px"
+                        priority={isTop}
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 
