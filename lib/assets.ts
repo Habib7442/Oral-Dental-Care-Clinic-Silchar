@@ -5,6 +5,7 @@ export const ASSETS = {
     portrait: "/assets/hero_image.webp",
   },
   doctor: "/assets/doctor_image_vertical.webp",
+  doctorHorizontal: "/assets/doctor_image_horizontal.webp",
   gallery: {
     veneers: {
       before: "/assets/veneers_and_crowns/before.webp",
