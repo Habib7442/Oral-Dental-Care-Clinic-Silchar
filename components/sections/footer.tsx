@@ -7,13 +7,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: "Root Canal Treatment (RCT)", href: "/services/root-canal" },
-    { label: "Crowns & Bridges", href: "/services/crowns-bridges" },
-    { label: "Dental Implants", href: "/services/implants" },
-    { label: "Teeth Whitening & Veneers", href: "/services/cosmetic" },
-    { label: "Orthodontics & Aligners", href: "/services/braces" },
-    { label: "Paediatric Dentistry", href: "/services/kids-dentistry" },
-    { label: "Preventive Care & Cleaning", href: "/services/checkup-cleaning" },
+    { label: "Root Canal Therapy (RCT)", href: "/services/root-canals" },
+    { label: "Veneers & Crowns", href: "/services/veneers-crowns" },
+    { label: "Dental Implants", href: "/services/dental-implants" },
+    { label: "Teeth Whitening", href: "/services/teeth-whitening" },
+    { label: "Orthodontics & Aligners", href: "/services/cosmetic-orthodontist" },
+    { label: "Paediatric Dentistry", href: "/services/paediatrics" },
+    { label: "Teeth Cleaning & Scaling", href: "/services/teeth-cleaning" },
   ];
 
   const quickLinks = [
