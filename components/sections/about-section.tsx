@@ -17,14 +17,15 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Doctor portrait in a premium frame */}
+          {/* Left Column: Doctor portrait & Doctors' Day Mementos */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.98, x: -20 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 w-full flex justify-center"
+            className="lg:col-span-5 w-full flex flex-col items-center gap-6"
           >
+            {/* Main Portrait Card */}
             <div className="relative w-full max-w-sm aspect-[4/5] bg-white border border-ink-300 rounded-3xl p-3 shadow-[0_8px_32px_rgba(27,19,32,0.04)] select-none">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-porcelain">
                 <Image
@@ -39,10 +40,44 @@ export default function AboutSection() {
               </div>
               
               {/* Floating credentials pill */}
-              <div className="absolute top-6 right-6 bg-plum-900/90 backdrop-blur-sm border border-plum-800 text-porcelain text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md">
+              <div className="absolute top-6 right-6 bg-plum-900/90 backdrop-blur-sm border border-plum-800 text-porcelain text-[10px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md font-sans">
                 BDS, MCh Surgery
               </div>
             </div>
+
+            {/* Doctors' Day Memento Cards (Side-by-Side Row) */}
+            <div className="w-full max-w-sm flex items-center gap-4">
+              {/* Memento 1 */}
+              <div className="flex-1 aspect-[4/5] bg-white border border-ink-300 rounded-2xl p-2 shadow-[0_4px_16px_rgba(27,19,32,0.02)] relative group overflow-hidden">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-porcelain">
+                  <Image
+                    src={ASSETS.doctorsDay.memento1}
+                    alt="Doctors' Day felicitation memento Dr. Devarati Ray"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-w-7xl) 20vw, 200px"
+                  />
+                </div>
+              </div>
+
+              {/* Memento 2 */}
+              <div className="flex-1 aspect-[4/5] bg-white border border-ink-300 rounded-2xl p-2 shadow-[0_4px_16px_rgba(27,19,32,0.02)] relative group overflow-hidden">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-porcelain">
+                  <Image
+                    src={ASSETS.doctorsDay.memento2}
+                    alt="Doctors' Day recognition award Dr. Devarati Ray"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-w-7xl) 20vw, 200px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Subtext under cards */}
+            <span className="text-[10px] uppercase tracking-wider text-ink-500 font-bold select-none text-center font-sans">
+              🏆 National Doctors&apos; Day Felicitation & Recognition
+            </span>
           </motion.div>
 
           {/* Right Column: Key details, short bio & redirect CTA */}

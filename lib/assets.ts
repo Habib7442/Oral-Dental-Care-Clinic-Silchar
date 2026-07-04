@@ -35,4 +35,8 @@ export const ASSETS = {
     two: "/assets/how-we-treat/2.webp",
     three: "/assets/how-we-treat/3.webp",
   },
+  doctorsDay: {
+    memento1: "/assets/doctors_day/doctors_day_memeto.webp",
+    memento2: "/assets/doctors_day/doctors_day_memento_2.webp",
+  },
 };

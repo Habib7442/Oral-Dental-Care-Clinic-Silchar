@@ -77,8 +77,8 @@ export default function AboutClient() {
 
           </div>
 
-          {/* Right Column: Lead Clinician Portrait Card */}
-          <div className="lg:col-span-5 w-full flex flex-col items-center">
+          {/* Right Column: Lead Clinician Portrait Card & Doctors' Day Mementos */}
+          <div className="lg:col-span-5 w-full flex flex-col items-center gap-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.98, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -111,10 +111,44 @@ export default function AboutClient() {
               </div>
             </motion.div>
 
-            {/* Minimalist Micro text under card */}
-            <span className="text-[9px] uppercase tracking-widest text-ink-500 mt-4 font-bold select-none">
-              🔬 BDS, MCh — Registered Dental Surgeon
-            </span>
+            {/* Doctors' Day Memento Cards (Side-by-Side Row) */}
+            <div className="w-full flex items-center gap-4">
+              {/* Memento 1 */}
+              <div className="flex-1 aspect-[4/5] bg-white border border-ink-300 rounded-2xl p-2 shadow-[0_4px_16px_rgba(27,19,32,0.02)] relative group overflow-hidden">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-porcelain">
+                  <Image
+                    src={ASSETS.doctorsDay.memento1}
+                    alt="Doctors' Day felicitation memento Dr. Devarati Ray"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-w-7xl) 20vw, 200px"
+                  />
+                </div>
+              </div>
+
+              {/* Memento 2 */}
+              <div className="flex-1 aspect-[4/5] bg-white border border-ink-300 rounded-2xl p-2 shadow-[0_4px_16px_rgba(27,19,32,0.02)] relative group overflow-hidden">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-porcelain">
+                  <Image
+                    src={ASSETS.doctorsDay.memento2}
+                    alt="Doctors' Day recognition award Dr. Devarati Ray"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-w-7xl) 20vw, 200px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Micro text under cards */}
+            <div className="flex flex-col items-center gap-1.5 text-center">
+              <span className="text-[9px] uppercase tracking-widest text-ink-500 font-bold select-none font-sans">
+                🔬 BDS, MCh — Registered Dental Surgeon
+              </span>
+              <span className="text-[10px] uppercase tracking-wider text-ink-500 font-bold select-none font-sans">
+                🏆 National Doctors&apos; Day Felicitation & Recognition
+              </span>
+            </div>
           </div>
 
         </div>
