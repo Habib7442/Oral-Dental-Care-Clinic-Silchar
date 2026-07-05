@@ -5,8 +5,8 @@ import Footer from "@/components/sections/footer";
 import ServicesClient from "./services-client";
 
 export const metadata = getMetadata({
-  title: "Clinical Specialties & Dental Treatments Directory",
-  description: "Explore Dr. Devarati Ray's full index of 19 advanced oral specialties including RCT, implants, braces, pediatric care, teeth whitening, and scaling in Silchar, Assam.",
+  title: "Dental Services & Treatments in Silchar",
+  description: "Explore Dr. Devarati Ray's full index of 19 advanced dental treatments including root canals, dental implants, braces, pediatric care, teeth whitening, and scaling in Silchar, Assam.",
   path: "/services"
 });
 
