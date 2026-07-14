@@ -8,6 +8,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HowWeTreat() {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+  const [playVideo, setPlayVideo] = useState(false);
 
   const treatmentImages = [
     {
@@ -132,21 +133,48 @@ export default function HowWeTreat() {
             </motion.div>
           </div>
 
-          {/* Column 2: YouTube Shorts Video (Privacy-Enhanced Embed with Logo Cropping) */}
+          {/* Column 2: YouTube Shorts Video (Privacy-Enhanced Embed with Logo Cropping and Performance Façade) */}
           <div className="md:col-span-4">
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-plum-950 w-full aspect-[9/16]"
+              className="group relative overflow-hidden rounded-3xl border border-plum-800 bg-plum-950 w-full aspect-[9/16] cursor-pointer"
+              onClick={() => setPlayVideo(true)}
             >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/8Z0apdk32-4?modestbranding=1&rel=0&iv_load_policy=3&controls=0"
-                title="Oral & Dental Clinic Treatment Video Case Study"
-                className="absolute inset-0 w-full h-full border-0 rounded-3xl scale-[1.22] origin-center"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                loading="lazy"
-              />
+              {playVideo ? (
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/8Z0apdk32-4?autoplay=1&modestbranding=1&rel=0&iv_load_policy=3&controls=1"
+                  title="Oral & Dental Clinic Treatment Video Case Study"
+                  className="absolute inset-0 w-full h-full border-0 rounded-3xl scale-[1.22] origin-center"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              ) : (
+                <div className="absolute inset-0 w-full h-full">
+                  {/* Thumbnail Image */}
+                  <img
+                    src="https://img.youtube.com/vi/8Z0apdk32-4/hqdefault.jpg"
+                    alt="Oral & Dental Clinic Treatment Video Case Study preview"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                  {/* Backdrop Overlay */}
+                  <div className="absolute inset-0 bg-plum-950/50 group-hover:bg-plum-950/40 transition-colors duration-300 z-10" />
+                  
+                  {/* Play Button & Label */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+                    <div className="w-16 h-16 rounded-full bg-plum-900/90 border-2 border-gold-500 flex items-center justify-center text-gold-500 shadow-lg group-hover:scale-110 group-hover:bg-plum-900 group-hover:text-gold-400 transition-all duration-300 animate-pulse">
+                      <svg className="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24">
+                        <title>Play video icon</title>
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    <span className="text-white text-xs font-bold uppercase tracking-widest mt-4 font-sans text-center px-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      Play Case Study Video
+                    </span>
+                  </div>
+                </div>
+              )}
             </motion.div>
           </div>
 
