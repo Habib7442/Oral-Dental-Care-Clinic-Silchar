@@ -151,7 +151,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center justify-between text-xs w-full">
                   <span>Sunday:</span>
-                  <span className="text-ink-500 font-medium px-2 py-0.5 bg-plum-800/20 rounded-md">
+                  <span className="text-ink-300 font-medium px-2 py-0.5 bg-plum-800/20 rounded-md">
                     Closed
                   </span>
                 </div>
@@ -162,7 +162,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom copyright / legal strip */}
-      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-16 md:mt-24 pt-8 border-t border-plum-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink-500 font-medium">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mt-16 md:mt-24 pt-8 border-t border-plum-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ink-300 font-medium">
         <div className="flex flex-wrap items-center gap-1.5 justify-center md:justify-start">
           <span>&copy; {currentYear} Oral & Dental Care Clinic Silchar. All rights reserved.</span>
           <span className="hidden md:inline text-plum-700">|</span>

@@ -60,7 +60,7 @@ export default function ContactClient() {
                     <span className="text-ink-500 text-xs mt-0.5 leading-relaxed">
                       Lochan Bairagi Road, Bilpar, Kanakpur, Silchar, Assam 788001
                     </span>
-                    <span className="text-[10px] text-gold-600 font-bold uppercase tracking-wider mt-1.5">
+                    <span className="text-[10px] text-gold-700 font-bold uppercase tracking-wider mt-1.5">
                       Landmark: Near Rahul Medicos
                     </span>
                   </div>

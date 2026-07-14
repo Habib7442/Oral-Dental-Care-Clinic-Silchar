@@ -216,7 +216,7 @@ export default function SmileGallery({ isStandalone = false }: { isStandalone?: 
             </div>
             
             {/* Guide micro text */}
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gold-200/60 mt-4 animate-pulse">
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gold-200 mt-4 animate-pulse">
               ◀ Drag Handle to Compare smile ▶
             </span>
           </div>

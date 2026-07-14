@@ -147,7 +147,7 @@ Thank you!`;
               className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-plum-900 leading-[1.1] max-w-2xl"
             >
               Restore Your Smile. <br />
-              <span className="text-gold-600">Restore Your Confidence.</span>
+              <span className="text-gold-700">Restore Your Confidence.</span>
             </motion.h1>
 
             {/* Subcopy details */}
@@ -170,9 +170,9 @@ Thank you!`;
                 </span>
               </div>
               
-              <h3 className="text-base font-serif font-semibold text-plum-900 mb-4 leading-snug">
+              <h2 className="text-base font-serif font-semibold text-plum-900 mb-4 leading-snug">
                 Request a Priority Clinical Appointment
-              </h3>
+              </h2>
 
               {submitted ? (
                 <div className="bg-plum-100/60 border border-plum-500/20 rounded-xl p-5 text-center text-xs font-medium text-plum-900 flex flex-col items-center justify-center gap-3 animate-fade-in">
