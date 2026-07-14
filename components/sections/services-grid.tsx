@@ -197,8 +197,8 @@ export default function ServicesGrid() {
                   {/* Large Card Specifications Strip */}
                   {isLargeCard && (
                     <div className="flex flex-wrap items-center gap-3 mb-6 pt-2">
-                      <div className="flex items-center gap-1 text-[10px] font-bold text-ink-500 uppercase tracking-wider bg-white border border-ink-300/40 rounded-lg px-2.5 py-1">
-                        <Clock className="w-3.5 h-3.5 text-gold-600 shrink-0" />
+                      <div className="flex items-center gap-1 text-[10px] font-bold text-ink-700 uppercase tracking-wider bg-white border border-ink-300/40 rounded-lg px-2.5 py-1">
+                        <Clock className="w-3.5 h-3.5 text-gold-700 shrink-0" />
                         <span>{service.duration.split(" (")[0]}</span>
                       </div>
                     </div>
@@ -208,7 +208,7 @@ export default function ServicesGrid() {
                 {/* Details Bar & Link */}
                 <div className="w-full">
                   {!isLargeCard && (
-                    <div className="flex items-center justify-between w-full text-[10px] sm:text-[11px] font-bold text-ink-500 border-t border-ink-300/40 pt-4 mt-auto">
+                    <div className="flex items-center justify-between w-full text-[10px] sm:text-[11px] font-bold text-ink-700 border-t border-ink-300/40 pt-4 mt-auto">
                       <span>{service.duration}</span>
                     </div>
                   )}

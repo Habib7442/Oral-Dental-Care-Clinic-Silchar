@@ -160,7 +160,7 @@ export default function ReviewsWall({ isStandalone = false }: { isStandalone?: b
                   <span className="text-xs font-bold text-plum-900 font-sans tracking-wide">
                     {review.name}
                   </span>
-                  <span className="text-[10px] font-medium text-ink-500 uppercase tracking-widest leading-none mt-0.5">
+                  <span className="text-[10px] font-medium text-ink-700 uppercase tracking-widest leading-none mt-0.5">
                     Verified Patient Review
                   </span>
                 </div>

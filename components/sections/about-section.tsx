@@ -33,9 +33,9 @@ export default function AboutSection() {
                   alt="Dr. Devarati Ray Dutta Chowdhury - Lead Dentist at Oral & Dental Care Clinic Silchar"
                   fill
                   className="object-cover"
-                  sizes="(max-w-7xl) 100vw, 400px"
+                  sizes="(max-width: 768px) 95vw, (max-width: 1024px) 45vw, 380px"
                   priority
-                  quality={95}
+                  quality={80}
                 />
               </div>
               
@@ -55,7 +55,7 @@ export default function AboutSection() {
                     alt="Doctors' Day felicitation memento Dr. Devarati Ray"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-w-7xl) 20vw, 200px"
+                    sizes="(max-width: 768px) 45vw, 180px"
                   />
                 </div>
               </div>
@@ -68,14 +68,14 @@ export default function AboutSection() {
                     alt="Doctors' Day recognition award Dr. Devarati Ray"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-w-7xl) 20vw, 200px"
+                    sizes="(max-width: 768px) 45vw, 180px"
                   />
                 </div>
               </div>
             </div>
 
             {/* Subtext under cards */}
-            <span className="text-[10px] uppercase tracking-wider text-ink-500 font-bold select-none text-center font-sans">
+            <span className="text-[10px] uppercase tracking-wider text-ink-700 font-bold select-none text-center font-sans">
               🏆 National Doctors&apos; Day Felicitation & Recognition
             </span>
           </motion.div>
@@ -123,7 +123,7 @@ export default function AboutSection() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs font-bold text-plum-900 leading-tight">100% Personal Care</span>
-                  <span className="text-[10px] text-ink-500 font-medium">No junior shift handoffs</span>
+                  <span className="text-[10px] text-ink-700 font-medium">No junior shift handoffs</span>
                 </div>
               </div>
 
@@ -133,7 +133,7 @@ export default function AboutSection() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs font-bold text-plum-900 leading-tight">Master of Surgery</span>
-                  <span className="text-[10px] text-ink-500 font-medium">BDS, MCh credentials</span>
+                  <span className="text-[10px] text-ink-700 font-medium">BDS, MCh credentials</span>
                 </div>
               </div>
             </div>

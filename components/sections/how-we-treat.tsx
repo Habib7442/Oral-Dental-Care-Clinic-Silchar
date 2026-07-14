@@ -126,7 +126,7 @@ export default function HowWeTreat() {
                   alt={treatmentImages[0].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 33vw, 95vw"
+                  sizes="(max-width: 768px) 95vw, (max-width: 1280px) 30vw, 380px"
                   priority
                 />
               </div>
@@ -194,7 +194,7 @@ export default function HowWeTreat() {
                   alt={treatmentImages[1].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 33vw, 95vw"
+                  sizes="(max-width: 768px) 95vw, (max-width: 1280px) 30vw, 380px"
                   priority
                 />
               </div>
@@ -214,7 +214,7 @@ export default function HowWeTreat() {
                   alt={treatmentImages[2].alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-w-7xl) 33vw, 95vw"
+                  sizes="(max-width: 768px) 95vw, (max-width: 1280px) 30vw, 380px"
                   priority
                 />
               </div>

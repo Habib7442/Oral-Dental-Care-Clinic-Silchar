@@ -136,7 +136,7 @@ Thank you!`;
             {/* Quick Clinic Timings Notice */}
             <div className="p-6 border border-gold-500/20 bg-gold-500/5 rounded-3xl w-full max-w-xl text-left">
               <h4 className="font-serif text-sm font-semibold text-plum-900 mb-2 flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-gold-600" />
+                <Clock className="w-4 h-4 text-gold-700" />
                 Clinic Visiting Hours
               </h4>
               <p className="text-ink-700 text-xs leading-relaxed font-medium">

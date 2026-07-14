@@ -304,7 +304,7 @@ Thank you!`;
                   ))}
                   <span className="text-xs font-bold text-plum-900 ml-1.5">4.9 ★ Rating</span>
                 </div>
-                <span className="text-[11px] font-semibold text-ink-500">
+                <span className="text-[11px] font-semibold text-ink-700">
                   Trusted by 248+ patients in Silchar
                 </span>
               </div>
@@ -405,7 +405,7 @@ Thank you!`;
                         alt={card.alt}
                         fill
                         className="object-cover pointer-events-none"
-                        sizes="(max-w-7xl) 100vw, 400px"
+                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 40vw, 380px"
                         priority={isTop}
                       />
                     </div>
@@ -431,7 +431,7 @@ Thank you!`;
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-plum-900 leading-tight">100% Sterile Facility</span>
-              <span className="text-xs text-ink-500 font-medium">Safe clinical environments</span>
+              <span className="text-xs text-ink-700 font-medium">Safe clinical environments</span>
             </div>
           </div>
 
@@ -441,7 +441,7 @@ Thank you!`;
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-plum-900 leading-tight">4+ Years of Care</span>
-              <span className="text-xs text-ink-500 font-medium">Dedicated oral expertise</span>
+              <span className="text-xs text-ink-700 font-medium">Dedicated oral expertise</span>
             </div>
           </div>
 
@@ -451,7 +451,7 @@ Thank you!`;
             </div>
             <div className="flex flex-col">
               <span className="font-semibold text-plum-900 leading-tight">Gentle & Painless</span>
-              <span className="text-xs text-ink-500 font-medium">Comfort-focused approach</span>
+              <span className="text-xs text-ink-700 font-medium">Comfort-focused approach</span>
             </div>
           </div>
         </motion.div>
