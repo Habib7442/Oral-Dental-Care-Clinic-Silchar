@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function ContactClient() {
   return (
-    <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
+    <section className="relative overflow-hidden bg-porcelain pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
 
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
@@ -99,13 +99,13 @@ export default function ContactClient() {
                 <div className="flex items-center justify-between text-xs sm:text-sm w-full py-1">
                   <span className="text-ink-700 font-medium">Monday – Saturday:</span>
                   <span className="text-plum-900 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/15 rounded-lg text-xs">
-                    10:00 AM – 8:00 PM
+                    8:00 AM – 9:00 PM
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs sm:text-sm w-full py-1 border-t border-ink-300/40">
                   <span className="text-ink-700 font-medium">Sunday:</span>
-                  <span className="text-ink-500 font-medium px-3 py-1 bg-ink-100 rounded-lg text-xs">
-                    Closed (Emergency Slots only)
+                  <span className="text-plum-900 font-bold px-3 py-1 bg-gold-500/10 border border-gold-500/15 rounded-lg text-xs">
+                    9:00 AM – 1:00 PM
                   </span>
                 </div>
               </div>

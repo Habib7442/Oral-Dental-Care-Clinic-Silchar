@@ -49,8 +49,8 @@ export default function Navigation() {
             : "bg-transparent border-transparent"
         )}
       >
-        {/* Top Gold Announcement Bar */}
-        <div className="bg-gold-500 text-plum-900 font-sans text-xs font-semibold py-2 px-4 border-b border-gold-600/10 shadow-sm flex items-center justify-center gap-1.5 flex-wrap">
+        {/* Top Gold Announcement Bar (hidden on small mobile devices to save vertical space) */}
+        <div className="hidden sm:flex bg-gold-500 text-plum-900 font-sans text-xs font-semibold py-2 px-4 border-b border-gold-600/10 shadow-sm items-center justify-center gap-1.5 flex-wrap">
           <span className="flex items-center gap-1">
             ✦ Silchar&apos;s Most-Loved Dental Care — Vetted 4.9
             <Star className="w-3.5 h-3.5 fill-plum-900 text-plum-900 inline" />

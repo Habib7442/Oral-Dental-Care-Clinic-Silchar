@@ -54,7 +54,7 @@ export default function GalleryClient() {
   }, [activeImageIndex]);
 
   return (
-    <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
+    <section className="relative overflow-hidden bg-porcelain pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
       {/* Structural visual accents */}
       <div className="absolute top-0 right-0 w-48 h-48 border-t-8 border-r-8 border-gold-500/5 translate-x-16 -translate-y-16 pointer-events-none hidden lg:block" />
 

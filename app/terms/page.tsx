@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
       <Navigation />
 
       <main className="flex-1 flex flex-col justify-center">
-        <section className="relative pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 px-6 md:px-8 w-full">
+        <section className="relative pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 px-6 md:px-8 w-full">
           {/* Decorative Corner Line */}
           <div className="absolute top-0 right-0 w-48 h-48 border-t-8 border-r-8 border-gold-500/5 translate-x-16 -translate-y-16 pointer-events-none hidden lg:block" />
 

@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { getMetadata } from "@/lib/seo";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
+import StickyActionBar from "@/components/sections/sticky-action-bar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,10 +38,11 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-background text-foreground pb-[68px] md:pb-0" suppressHydrationWarning>
         <SmoothScrollProvider>
           {children}
         </SmoothScrollProvider>
+        <StickyActionBar />
       </body>
     </html>
   );

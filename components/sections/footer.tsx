@@ -146,13 +146,13 @@ export default function Footer() {
                 <div className="flex items-center justify-between text-xs w-full">
                   <span>Mon – Sat:</span>
                   <span className="text-gold-500 font-semibold px-2 py-0.5 bg-plum-800/50 rounded-md">
-                    10:00 AM – 8:00 PM
+                    8:00 AM – 9:00 PM
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs w-full">
                   <span>Sunday:</span>
-                  <span className="text-ink-300 font-medium px-2 py-0.5 bg-plum-800/20 rounded-md">
-                    Closed
+                  <span className="text-gold-500 font-semibold px-2 py-0.5 bg-plum-800/50 rounded-md">
+                    9:00 AM – 1:00 PM
                   </span>
                 </div>
               </div>

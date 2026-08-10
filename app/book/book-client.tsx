@@ -55,7 +55,7 @@ Thank you!`;
   };
 
   return (
-    <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
+    <section className="relative overflow-hidden bg-porcelain pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
 
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
@@ -140,8 +140,8 @@ Thank you!`;
                 Clinic Visiting Hours
               </h4>
               <p className="text-ink-700 text-xs leading-relaxed font-medium">
-                ✦ Monday – Saturday: 10:00 AM – 8:00 PM <br />
-                ✦ Sunday: Prior Clinical Appointments Only
+                ✦ Monday – Saturday: 8:00 AM – 9:00 PM <br />
+                ✦ Sunday: 9:00 AM – 1:00 PM
               </p>
             </div>
           </div>

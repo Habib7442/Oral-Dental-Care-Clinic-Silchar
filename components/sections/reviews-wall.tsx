@@ -79,7 +79,7 @@ export default function ReviewsWall({ isStandalone = false }: { isStandalone?: b
       className={cn(
         "relative bg-gold-200/20 border-b border-ink-300 overflow-hidden",
         isStandalone
-          ? "pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
+          ? "pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 min-h-screen"
           : "py-24 md:py-32"
       )}
     >

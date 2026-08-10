@@ -11,7 +11,7 @@ export default function NotFound() {
       <Navigation />
       
       {/* 404 Center Content Container */}
-      <main className="flex-1 flex flex-col items-center justify-center pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 px-6 relative overflow-hidden">
+      <main className="flex-1 flex flex-col items-center justify-center pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 px-6 relative overflow-hidden">
         {/* Decorative Corner Line */}
         <div className="absolute top-0 right-0 w-48 h-48 border-t-8 border-r-8 border-gold-500/10 translate-x-16 -translate-y-16 pointer-events-none hidden lg:block" />
         

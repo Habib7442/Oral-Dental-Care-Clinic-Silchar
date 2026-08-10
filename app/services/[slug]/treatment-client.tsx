@@ -65,7 +65,7 @@ Thank you!`;
   };
 
   return (
-    <section className="relative overflow-hidden bg-porcelain pt-[210px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
+    <section className="relative overflow-hidden bg-porcelain pt-[172px] sm:pt-[160px] md:pt-[180px] lg:pt-[200px] pb-24 border-b border-ink-300 min-h-screen">
 
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 w-full">
