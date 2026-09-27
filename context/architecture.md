@@ -9,6 +9,7 @@
 | **Animation** | Framer Motion | Fluid micro-animations, scroll-reveals, custom before/after drag-control logic. |
 | **UI Kit** | Shadcn/ui & Radix UI | Standardized components (modals, inputs, triggers, accordions). |
 | **Form Routing** | Next.js Server Actions + Zod | Secure, type-safe payload validation and server processing. |
+| **Analytics** | Vercel Web Analytics (`@vercel/analytics`) | Privacy-friendly page-view tracking, mounted once in the root layout. |
 | **Email Delivery** | Resend or SMTP | Direct mailing of patient appointment requests to the clinic's care mailbox. |
 
 ## System Boundaries
