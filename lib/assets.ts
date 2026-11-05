@@ -39,4 +39,9 @@ export const ASSETS = {
     memento1: "/assets/doctors_day/doctors_day_memeto.webp",
     memento2: "/assets/doctors_day/doctors_day_memento_2.webp",
   },
+  patientEducation: {
+    brushingMistakes: "/assets/patient-education/5-brushing-mistakes.webp",
+    oralSystemic: "/assets/patient-education/oral-systemic-health.webp",
+    dailyHabits: "/assets/patient-education/11-daily-oral-care-habits.webp",
+  },
 };

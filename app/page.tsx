@@ -7,6 +7,7 @@ import AboutSection from "@/components/sections/about-section";
 import ClinicGallery from "@/components/sections/clinic-gallery";
 import ReviewsWall from "@/components/sections/reviews-wall";
 import SmileGallery from "@/components/sections/smile-gallery";
+import PatientEducation from "@/components/sections/patient-education";
 import Faqs from "@/components/sections/faqs";
 import { getDentistSchema } from "@/lib/seo";
 
@@ -30,6 +31,9 @@ export default function Home() {
 
         {/* How We Treat Clinical Section */}
         <HowWeTreat />
+
+        {/* Doctor's Daily Oral Care & Patient Education Guides */}
+        <PatientEducation />
 
         {/* Dynamic Services Grid Section */}
         <ServicesGrid />
